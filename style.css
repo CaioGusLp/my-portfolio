@@ -537,3 +537,61 @@ footer .line-footer p a {
         opacity: 1;
     }
 }
+
+@media screen and (min-width: 1021px) {
+    .btn-abrir-menu {
+        display: none;
+    }
+}
+
+a i, a .bi {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+}
+
+
+/* Container dos botões */
+.btns-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* no mobile quebra de linha se faltar espaço */
+}
+
+/* Botões iguais */
+.btn,
+.btn:visited,
+.btn:hover,
+.btn:active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #ffa500; /* sempre laranja */
+  color: #000;               /* sempre preto */
+  border: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* Hover: só destaque (sombra + zoom) */
+.btn:hover {
+  box-shadow: 0 0 10px #fca400;
+  transform: scale(1.06);
+}
+
+/* Centralizar no mobile */
+@media screen and (max-width: 1020px) {
+  .btns-cta {
+    justify-content: center;
+  }
+}
+
+
+.btn i {
+  margin-left: 8px;   /* espaço entre texto e ícone */
+  font-size: 25px;    /* tamanho do ícone */;
+}

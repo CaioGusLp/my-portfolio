@@ -10,12 +10,15 @@
     <!--Fim Google Fonts-->
     <!-- bootstrap icons-->
      <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     
     <title>CL DEV</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo_1.ico">
+
+
 
 </head>
 <body>
@@ -31,10 +34,10 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Especialidades</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
+                    <li><a href="#topo-do-site">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
                 </ul>
             </nav>
 
@@ -43,6 +46,8 @@
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->
+
+            
 
 
                 <div class="btn-abrir-menu " id="btn-menu">
@@ -56,11 +61,11 @@
 
                     <nav>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Especialidades</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#topo-do-site">Inicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                        <li><a href="#formulario">Contato</a></li>
                     </ul>
                 </nav>
 
@@ -70,7 +75,7 @@
     </Header>
 
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" id="topo-do-site">
             <div class="interface">
                 <div class="flex">
                    <div class="txt-topo-site">
@@ -80,12 +85,14 @@
                         Minha atuação abrange desde soluções web dinâmicas até aplicações personalizadas, sempre com foco em performance, escalabilidade e experiência do usuário. 
                         Cada projeto é construído para entregar inovação, eficiência e valor real.</p>
 
-                        <div class="btn-contato">
-                            <a href="#">
-                                <button>Entre em contato</button>
-                            </a>
+                        <div class="btns-cta">
+                        <!-- Botão de contato -->
+                        <a class="btn btn-primary" href="#formulario">Entre em contato</a>
+
+                        <!-- Botão do currículo -->
+                        <a class="btn btn-outline" href="CaioLopesDev.pdf" download target="_blank" rel="noopener">Meu curriculo<i class="bi bi-filetype-pdf"></i></a>
                         </div>
-                   </div> <!--txt-topo-site-->
+                                        </div> <!--txt-topo-site-->
 
                    <div class="img-topo-site">
                     <img src="images/fox_progr.png" alt="Imagem Topo do Site">
@@ -95,7 +102,7 @@
             </div> <!--interface-->
         </section> <!--topo-do-site-->
 
-        <section class="especialidades">
+        <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -118,7 +125,7 @@
             </div><!--interface-->
         </section><!--especialidades-->
 
-            <section class="sobre">
+            <section class="sobre" id="sobre">
                 <div class="interface">
                     <div class="flex">
                         <div class="img-sobre">
@@ -131,7 +138,7 @@
                             <p>Sou um desenvolvedor apaixonado por criar soluções digitais que unem design e funcionalidade. Com experiência em HTML, CSS, JavaScript e frameworks modernos, transformo ideias em experiências online envolventes e eficientes. Estou sempre em busca de inovação e aprimoramento contínuo para entregar projetos que superem expectativas.</p>
                             <p>Fora do mundo do código, sou um entusiasta de tecnologia, sempre explorando novas tendências e ferramentas que possam aprimorar meu trabalho. Acredito que a combinação de criatividade e técnica é a chave para desenvolver soluções digitais impactantes.</p>
                             <div class="btn-social">
-                                <a href="https://www.instagram.com/caiomaixlevanto/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
                                 <a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener noreferrer"><button><i  class="bi bi-linkedin"></i></button></a>
                                 <a href="https://wa.me/5511966076031?text=Olá,%20quero%20mais%20informações" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-whatsapp"></i></button></a>
                             </div><!--btn-social-->
@@ -140,7 +147,7 @@
                 </div><!--interface-->
             </section><!--sobre-->
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
@@ -157,15 +164,15 @@
             </div> <!--interface-->
         </section><!--portfolio-->
 
-        <section class="formulario">
+        <section class="formulario" id="formulario">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
                 
-                <form action="">
-                  <input type="text" name="" id="" placeholder="Seu nome completo:" required>  
-                  <input type="text" name="" id="" placeholder="Seu e-email:" required>  
-                  <input type="text" name="" id="" placeholder="Seu celular:">
-                  <textarea name="" id="" placeholder="Sua mensagem" required></textarea>  
+                <form method="post" action="">
+                  <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required autocomplete="off"> 
+                  <input type="text" name="email" id="email" placeholder="Seu e-email:" required autocomplete="off">  
+                  <input type="text" name="celular" id="celular" placeholder="Seu celular:">
+                  <textarea name=""mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>  
                   <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div><!--interface-->
