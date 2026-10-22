@@ -6,16 +6,66 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Devicon (Símbolos Oficiais das Linguagens e Bancos de Dados) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     
     <title>CL DEV | Caio Lopes - Portfólio</title>
     <link rel="icon" type="image/x-icon" href="images/Logo_1.ico">
 </head>
-<body>
+<body class="loading-lock">
+
+    <!-- =================================================================
+         TELA DE CARREGAMENTO DE CIBERSEGURANÇA
+         ================================================================= -->
+    <div id="cyber-loader" class="cyber-loader">
+        <div class="cyber-grid-bg"></div>
+        <div class="scanline"></div>
+
+        <div class="cyber-terminal">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <span class="terminal-title"><i class="bi bi-shield-lock-fill"></i> CL.DEV // SECURE GATEWAY v4.2</span>
+                <span id="cyber-hex" class="cyber-hex">0x7F9A2C</span>
+            </div>
+
+            <div class="cyber-center-shield">
+                <div class="shield-ring ring-outer"></div>
+                <div class="shield-ring ring-inner"></div>
+                <i class="bi bi-shield-shaded" id="cyber-shield-icon"></i>
+            </div>
+
+            <div class="cyber-status-title" id="cyber-status-title">
+                ESTABELECENDO CONEXÃO CRIPTOGRAFADA...
+            </div>
+
+            <div class="cyber-logs" id="cyber-logs">
+                <div class="log-line"><span class="log-tag">[TLS 1.3]</span> Handshake criptográfico AES-256-GCM iniciado...</div>
+            </div>
+
+            <div class="cyber-progress-wrapper">
+                <div class="cyber-progress-info">
+                    <span id="cyber-step-label">VERIFICANDO FIREWALL & INTEGRIDADE</span>
+                    <span id="cyber-percent">0%</span>
+                </div>
+                <div class="cyber-progress-bar">
+                    <div class="cyber-progress-fill" id="cyber-progress-fill"></div>
+                </div>
+            </div>
+
+            <button id="skip-loader" class="skip-loader-btn">
+                Acessar Imediatamente <i class="bi bi-chevron-double-right"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- Efeitos de luz de fundo -->
     <div class="bg-glow glow-1"></div>
@@ -33,6 +83,7 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#topo-do-site">Início</a></li>
+                    <li><a href="#linguagens">Linguagens & BD</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#portfolio">Projetos & Apps</a></li>
@@ -56,6 +107,7 @@
                 <nav>
                     <ul>
                         <li><a href="#topo-do-site">Início</a></li>
+                        <li><a href="#linguagens">Linguagens & BD</a></li>
                         <li><a href="#especialidades">Especialidades</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#portfolio">Projetos & Apps</a></li>
@@ -74,10 +126,10 @@
                 <div class="flex">
                     <div class="txt-topo-site">
                         <div class="badge-tech">
-                            <span class="pulse-dot"></span> Full-Stack & Mobile Developer
+                            <span class="pulse-dot"></span> Full-Stack, Banco de Dados & Segurança
                         </div>
                         <h1>TRANSFORMANDO CÓDIGO E DESIGN EM SOLUÇÕES INTELIGENTES<span>.</span></h1>
-                        <p>Desenvolvo softwares, aplicativos, sites e sistemas digitais completos, alinhando design moderno e tecnologia avançada. Minha atuação abrange desde soluções web dinâmicas até aplicações personalizadas, sempre com foco em performance, escalabilidade e experiência do usuário.</p>
+                        <p>Desenvolvo softwares, aplicativos, sites e sistemas digitais completos, alinhando design moderno, bancos de dados estruturados e tecnologia avançada. Minha atuação abrange desde soluções web dinâmicas até aplicações personalizadas com foco em performance, segurança e experiência do usuário.</p>
 
                         <div class="btns-cta">
                             <a class="btn btn-primary-custom" href="#formulario">
@@ -87,36 +139,170 @@
                                 Meu currículo <i class="bi bi-filetype-pdf"></i>
                             </a>
                         </div>
-
-                        <div class="tech-stack-strip">
-                            <span>Stack principal:</span>
-                            <div class="tech-pills">
-                                <span><i class="bi bi-filetype-html"></i> HTML5</span>
-                                <span><i class="bi bi-filetype-css"></i> CSS3</span>
-                                <span><i class="bi bi-filetype-js"></i> JavaScript</span>
-                                <span><i class="bi bi-phone"></i> Mobile UI</span>
-                                <span><i class="bi bi-cloud-check"></i> Cloud & APIs</span>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="img-topo-site">
                         <div class="hero-visual-wrapper">
                             <img src="images/fox_progr.png" alt="Imagem Topo do Site" onerror="this.src='https://placehold.co/450x450/111111/ffa500?text=CL+DEV'">
                             <div class="floating-card card-code">
-                                <i class="bi bi-braces-asterisk"></i>
+                                <i class="bi bi-database-fill-check"></i>
                                 <div>
-                                    <strong>Clean Code</strong>
-                                    <small>Alta Performance</small>
+                                    <strong>Full-Stack & BD</strong>
+                                    <small>SQL & NoSQL</small>
                                 </div>
                             </div>
                             <div class="floating-card card-ui">
-                                <i class="bi bi-phone-flip"></i>
+                                <i class="bi bi-shield-check"></i>
                                 <div>
                                     <strong>Apps & Web</strong>
-                                    <small>100% Responsivo</small>
+                                    <small>Arquitetura Segura</small>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LINGUAGENS, TECNOLOGIAS & BANCOS DE DADOS (COM CORES E SÍMBOLOS OFICIAIS) -->
+        <section class="linguagens-sec" id="linguagens">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">STACK TECNOLÓGICA</span>
+                    <h2 class="titulo">LINGUAGENS & <span>BANCOS DE DADOS.</span></h2>
+                    <p class="section-desc">Domínio em tecnologias modernas de Front-end, Back-end e modelagem de Bancos de Dados relacionais (SQL) e não-relacionais (NoSQL).</p>
+                </div>
+
+                <div class="tech-grid">
+                    <!-- HTML5 -->
+                    <div class="tech-card" style="--tech-color: #E34F26;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>HTML5</h4>
+                            <span class="tech-badge">Front-end</span>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="tech-card" style="--tech-color: #1572B6;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>CSS3</h4>
+                            <span class="tech-badge">Estilização & UI</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="tech-card" style="--tech-color: #F7DF1E;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-javascript-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>JavaScript</h4>
+                            <span class="tech-badge">ES6+ / Interatividade</span>
+                        </div>
+                    </div>
+
+                    <!-- TypeScript -->
+                    <div class="tech-card" style="--tech-color: #3178C6;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-typescript-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>TypeScript</h4>
+                            <span class="tech-badge">Tipagem Forte</span>
+                        </div>
+                    </div>
+
+                    <!-- React -->
+                    <div class="tech-card" style="--tech-color: #61DAFB;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-react-original"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>React</h4>
+                            <span class="tech-badge">Web & Mobile UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="tech-card" style="--tech-color: #339933;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-nodejs-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Node.js</h4>
+                            <span class="tech-badge">Back-end & APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="tech-card" style="--tech-color: #3776AB;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-python-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Python</h4>
+                            <span class="tech-badge">Automação & IA</span>
+                        </div>
+                    </div>
+
+                    <!-- PostgreSQL (BD) -->
+                    <div class="tech-card" style="--tech-color: #4169E1;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-postgresql-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>PostgreSQL</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco de Dados SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- MySQL (BD) -->
+                    <div class="tech-card" style="--tech-color: #00758F;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-mysql-original"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>MySQL</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco Relacional</span>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB (BD) -->
+                    <div class="tech-card" style="--tech-color: #47A248;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-mongodb-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>MongoDB</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco NoSQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Firebase / Cloud DB (BD) -->
+                    <div class="tech-card" style="--tech-color: #FFCA28;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-firebase-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Firebase DB</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-cloud-check"></i> Realtime Cloud BD</span>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="tech-card" style="--tech-color: #F05032;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-git-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Git & GitHub</h4>
+                            <span class="tech-badge">Versionamento</span>
                         </div>
                     </div>
                 </div>
@@ -136,10 +322,10 @@
                             <i class="bi bi-code-square"></i>
                         </div>
                         <h3>Sistemas & Websites</h3>
-                        <p>Sistemas web completos, como plataformas para estacionamento rotativo com design responsivo, informações claras sobre tarifas e planos, além de integração para reservas e gestão online.</p>
+                        <p>Sistemas web completos, como plataformas para estacionamento rotativo com design responsivo, informações claras sobre tarifas e planos, além de integração com banco de dados para reservas e gestão online.</p>
                         <div class="box-tags">
                             <span>Web App</span>
-                            <span>Dashboard</span>
+                            <span>Banco de Dados</span>
                             <span>Responsivo</span>
                         </div>
                     </div>
@@ -149,11 +335,11 @@
                             <i class="bi bi-cart-check"></i>
                         </div>
                         <h3>Loja Online & E-Commerce</h3>
-                        <p>Lojas virtuais desenvolvidas com foco em usabilidade e conversão, oferecendo navegação intuitiva, checkout transparente e integração com meios de pagamento seguros como Pix e Cartão.</p>
+                        <p>Lojas virtuais desenvolvidas com foco em usabilidade e conversão, oferecendo navegação intuitiva, controle de estoque em banco de dados e integração com meios de pagamento seguros.</p>
                         <div class="box-tags">
                             <span>Checkout Pix</span>
                             <span>Alta Conversão</span>
-                            <span>Catálogo</span>
+                            <span>Catálogo SQL</span>
                         </div>
                     </div>
 
@@ -162,7 +348,7 @@
                             <i class="bi bi-phone"></i>
                         </div>
                         <h3>Interfaces de Apps & Blogs</h3>
-                        <p>Aplicações móveis e plataformas de conteúdo estruturadas para oferecer leitura fluida, interatividade rápida e uma experiência de utilizador moderna em qualquer dispositivo.</p>
+                        <p>Aplicações móveis e plataformas de conteúdo estruturadas para oferecer leitura fluida, interatividade rápida e uma experiência de usuário moderna em qualquer dispositivo.</p>
                         <div class="box-tags">
                             <span>UI/UX Mobile</span>
                             <span>SEO</span>
@@ -189,8 +375,8 @@
                     <div class="txt-sobre">
                         <span class="subtitulo">QUEM SOU EU</span>
                         <h2>MUITO PRAZER, <span>SOU CAIO LOPES.</span></h2>
-                        <p>Sou um desenvolvedor apaixonado por criar soluções digitais que unem design de alto nível e funcionalidade sólida. Com experiência em HTML, CSS, JavaScript, integrações em nuvem e frameworks modernos, transformo ideias complexas em experiências online envolventes e eficientes.</p>
-                        <p>Fora do mundo do código, sou um entusiasta de tecnologia e inteligência artificial, sempre explorando novas tendências e ferramentas que possam aprimorar o meu trabalho. Acredito que a combinação de criatividade e rigor técnico é a chave para desenvolver aplicações digitais impactantes.</p>
+                        <p>Sou um desenvolvedor apaixonado por criar soluções digitais que unem design de alto nível, segurança e funcionalidade sólida. Com experiência em Front-end, Back-end, Bancos de Dados (SQL e NoSQL) e frameworks modernos, transformo ideias em experiências online envolventes e eficientes.</p>
+                        <p>Fora do mundo do código, sou um entusiasta de tecnologia, cibersegurança e inteligência artificial, sempre explorando novas tendências e ferramentas que possam aprimorar meu trabalho. Acredito que a combinação de criatividade e técnica é a chave para desenvolver soluções digitais impactantes.</p>
 
                         <div class="sobre-stats">
                             <div class="stat-item">
@@ -199,11 +385,11 @@
                             </div>
                             <div class="stat-item">
                                 <strong>Full-Stack</strong>
-                                <span>Front & Back-end</span>
+                                <span>Front, Back & BD</span>
                             </div>
                             <div class="stat-item">
-                                <strong>UI/UX</strong>
-                                <span>Design Interativo</span>
+                                <strong>SecOps</strong>
+                                <span>Código Seguro</span>
                             </div>
                         </div>
 
@@ -223,7 +409,7 @@
                 <div class="section-header">
                     <span class="subtitulo">EXPERIÊNCIA INTERATIVA</span>
                     <h2 class="titulo">PROJETOS & <span>TELAS DE APPS.</span></h2>
-                    <p class="section-desc">Interaja com as telas abaixo: clique nas abas de cada smartphone para navegar pelas diferentes telas das aplicações desenvolvidas.</p>
+                    <p class="section-desc">Interaja com as telas abaixo: clique nas abas inferiores de cada smartphone para navegar pelas diferentes telas das aplicações.</p>
                 </div>
 
                 <!-- Filtros de categoria -->
@@ -232,7 +418,7 @@
                     <button class="filter-btn" data-filter="fintech">Fintech & Crédito</button>
                     <button class="filter-btn" data-filter="delivery">Delivery & Food</button>
                     <button class="filter-btn" data-filter="mobility">Estacionamento</button>
-                    <button class="filter-btn" data-filter="ai">SaaS & Cloud</button>
+                    <button class="filter-btn" data-filter="ai">SaaS, BD & Cloud</button>
                 </div>
 
                 <div class="projects-grid">
@@ -250,7 +436,6 @@
                                 </div>
                             </div>
 
-                            <!-- Telas do App 1 -->
                             <div class="app-screens">
                                 <!-- Tela 1: Carteira & Cartão -->
                                 <div class="app-screen active" data-screen="1">
@@ -330,7 +515,7 @@
                                             <i class="bi bi-check-circle-fill"></i>
                                             <div>
                                                 <strong>Pagamento Instantâneo</strong>
-                                                <small>Taxa R$ 0,00 • Seguro</small>
+                                                <small>Taxa R$ 0,00 • Criptografado</small>
                                             </div>
                                         </div>
                                         <div class="fake-app-btn">Confirmar Envio Pix</div>
@@ -338,7 +523,6 @@
                                 </div>
                             </div>
 
-                            <!-- Navegação interna do App -->
                             <div class="phone-tabbar">
                                 <button class="screen-btn active" data-target="1"><i class="bi bi-wallet2"></i><span>Carteira</span></button>
                                 <button class="screen-btn" data-target="2"><i class="bi bi-bar-chart-line"></i><span>Gastos</span></button>
@@ -349,11 +533,11 @@
                         <div class="project-info">
                             <div class="project-tags">
                                 <span>Fintech UI</span>
-                                <span>JavaScript</span>
+                                <span>PostgreSQL</span>
                                 <span>API Pix</span>
                             </div>
                             <h3>FinPay — App de Crédito & Banco Digital</h3>
-                            <p>Aplicação financeira com gestão de cartão virtual, gráficos de controle de despesas em tempo real e fluxo completo de pagamentos instantâneos.</p>
+                            <p>Aplicação financeira com gestão de cartão virtual, banco de dados transacional seguro e fluxo completo de pagamentos instantâneos.</p>
                         </div>
                     </article>
 
@@ -470,11 +654,11 @@
                         <div class="project-info">
                             <div class="project-tags">
                                 <span>Mobile Commerce</span>
-                                <span>UI/UX</span>
-                                <span>Tracking</span>
+                                <span>MongoDB</span>
+                                <span>Node.js</span>
                             </div>
                             <h3>DevFood — App de Delivery & Pizzaria</h3>
-                            <p>Plataforma completa de pedidos online com cardápio interativo, cálculo automático de carrinho com cupons e acompanhamento de entrega em tempo real.</p>
+                            <p>Plataforma completa de pedidos online com cardápio dinâmico integrado a banco de dados, cálculo de cupons e rastreio de entrega em tempo real.</p>
                         </div>
                     </article>
 
@@ -517,7 +701,7 @@
                                     <div class="fake-app-btn">Ativar Ticket Digital</div>
                                 </div>
 
-                                <!-- Tela 2: Cronómetro Ativo -->
+                                <!-- Tela 2: Cronômetro Ativo -->
                                 <div class="app-screen" data-screen="2">
                                     <div class="app-top-bar">
                                         <strong>Ticket Ativo</strong>
@@ -535,7 +719,7 @@
                                 <div class="app-screen" data-screen="3">
                                     <div class="app-top-bar">
                                         <strong>Tarifas & Créditos</strong>
-                                        <i class="bi bi-Credit-card"></i>
+                                        <i class="bi bi-credit-card"></i>
                                     </div>
                                     <div class="tx-list">
                                         <div class="tx-item">
@@ -567,15 +751,15 @@
                         <div class="project-info">
                             <div class="project-tags">
                                 <span>Sistema Web & App</span>
-                                <span>Gestão Online</span>
+                                <span>MySQL</span>
                                 <span>Mobilidade</span>
                             </div>
                             <h3>ParkSmart — Sistema de Estacionamento Rotativo</h3>
-                            <p>Solução prática para gestão de vagas em tempo real, ativação de tickets digitais, contagem regressiva e consulta transparente de planos e tarifas.</p>
+                            <p>Solução prática para gestão de vagas em tempo real, ativação de tickets digitais, contagem regressiva e banco de dados de reservas e tarifas.</p>
                         </div>
                     </article>
 
-                    <!-- PROJETO 4: AI & CLOUD DASHBOARD APP -->
+                    <!-- PROJETO 4: AI, BD & CLOUD DASHBOARD APP -->
                     <article class="project-card" data-category="ai">
                         <div class="phone-mockup">
                             <div class="phone-notch"></div>
@@ -589,50 +773,50 @@
                             </div>
 
                             <div class="app-screens">
-                                <!-- Tela 1: Cloud Metrics -->
+                                <!-- Tela 1: Cloud & DB Metrics -->
                                 <div class="app-screen active" data-screen="1">
                                     <div class="app-top-bar">
                                         <div>
                                             <small>Cluster São Paulo</small>
-                                            <strong>NexusCloud AI</strong>
+                                            <strong>NexusCloud & DB</strong>
                                         </div>
                                         <i class="bi bi-cpu"></i>
                                     </div>
                                     <div class="metrics-grid">
                                         <div class="metric-box">
-                                            <small>Uptime API</small>
-                                            <strong>99.98%</strong>
+                                            <small>Uptime BD</small>
+                                            <strong>99.99%</strong>
                                         </div>
                                         <div class="metric-box">
-                                            <small>Latência</small>
-                                            <strong>24 ms</strong>
+                                            <small>Queries/s</small>
+                                            <strong>1.420</strong>
                                         </div>
                                     </div>
                                     <div class="tx-list">
                                         <div class="tx-item">
-                                            <i class="bi bi-hdd-network"></i>
-                                            <div><strong>Deploy Produção v2.4</strong><small>Concluído com sucesso</small></div>
+                                            <i class="bi bi-database-check"></i>
+                                            <div><strong>Backup PostgreSQL</strong><small>Snapshot criptografado</small></div>
                                             <span class="positive">OK</span>
                                         </div>
                                         <div class="tx-item">
-                                            <i class="bi bi-robot"></i>
-                                            <div><strong>Agente IA Ativo</strong><small>Processando requisições</small></div>
-                                            <span class="positive">ON</span>
+                                            <i class="bi bi-shield-check"></i>
+                                            <div><strong>WAF & Firewall</strong><small>Zero intrusões detectadas</small></div>
+                                            <span class="positive">ATIVO</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tela 2: Assistente IA -->
+                                <!-- Tela 2: Assistente IA SQL -->
                                 <div class="app-screen" data-screen="2">
                                     <div class="app-top-bar">
-                                        <strong>Copiloto Dev IA</strong>
+                                        <strong>Copiloto DBA & IA</strong>
                                         <span class="tag-pill">Online</span>
                                     </div>
                                     <div class="ai-chat-box">
-                                        <div class="chat-bubble user">Otimizar consulta SQL do relatório mensal.</div>
-                                        <div class="chat-bubble ai">Índice composto criado! O tempo de resposta caiu de 840ms para 32ms ⚡</div>
+                                        <div class="chat-bubble user">Otimizar consulta SQL do relatório mensal de clientes.</div>
+                                        <div class="chat-bubble ai">Índice composto criado na tabela! Tempo de query reduzido de 840ms para 18ms ⚡</div>
                                     </div>
-                                    <div class="fake-app-btn"><i class="bi bi-stars"></i> Executar Automação</div>
+                                    <div class="fake-app-btn"><i class="bi bi-stars"></i> Executar Query</div>
                                 </div>
 
                                 <!-- Tela 3: Sprints & Tasks -->
@@ -644,7 +828,7 @@
                                     <div class="tx-list">
                                         <div class="tx-item">
                                             <i class="bi bi-check2-square"></i>
-                                            <div><strong>Integração Gateway</strong><small>Back-end • Concluído</small></div>
+                                            <div><strong>Modelagem de Dados</strong><small>Banco SQL • Concluído</small></div>
                                             <span class="positive">100%</span>
                                         </div>
                                         <div class="tx-item">
@@ -654,28 +838,28 @@
                                         </div>
                                         <div class="tx-item">
                                             <i class="bi bi-arrow-repeat"></i>
-                                            <div><strong>Testes Automatizados</strong><small>QA • Em progresso</small></div>
-                                            <span>85%</span>
+                                            <div><strong>Auditoria Pentest</strong><small>Segurança • Em progresso</small></div>
+                                            <span>90%</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="phone-tabbar">
-                                <button class="screen-btn active" data-target="1"><i class="bi bi-speedometer2"></i><span>Status</span></button>
-                                <button class="screen-btn" data-target="2"><i class="bi bi-robot"></i><span>IA Chat</span></button>
+                                <button class="screen-btn active" data-target="1"><i class="bi bi-database-gear"></i><span>Cluster BD</span></button>
+                                <button class="screen-btn" data-target="2"><i class="bi bi-robot"></i><span>IA SQL</span></button>
                                 <button class="screen-btn" data-target="3"><i class="bi bi-list-check"></i><span>Tasks</span></button>
                             </div>
                         </div>
 
                         <div class="project-info">
                             <div class="project-tags">
-                                <span>Cloud & AI</span>
-                                <span>Dashboard</span>
+                                <span>Cloud & SecOps</span>
+                                <span>SQL / NoSQL</span>
                                 <span>Full-Stack</span>
                             </div>
-                            <h3>NexusCloud — Painel DevOps & Assistente IA</h3>
-                            <p>Aplicação voltada para monitorização de servidores em nuvem, automação de tarefas com inteligência artificial e acompanhamento ágil de sprints.</p>
+                            <h3>NexusCloud — Painel de Banco de Dados & IA</h3>
+                            <p>Aplicação voltada para monitoramento de clusters de banco de dados, otimização de queries com IA e segurança de infraestrutura em nuvem.</p>
                         </div>
                     </article>
 
@@ -683,21 +867,33 @@
             </div>
         </section>
 
-        <!-- FORMULÁRIO DE CONTATO -->
+        <!-- FORMULÁRIO DE CONTATO (REDIRECIONAMENTO E-MAIL + WHATSAPP) -->
         <section class="formulario" id="formulario">
             <div class="interface">
                 <div class="section-header">
                     <span class="subtitulo">VAMOS CONVERSAR?</span>
                     <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+                    <p class="section-desc">Preencha os dados abaixo: sua mensagem será encaminhada diretamente para meu e-mail (<strong>caiogustavolopezs@gmail.com</strong>) e abrirá o atendimento rápido no meu WhatsApp (<strong>11 96607-6031</strong>).</p>
                 </div>
                 
-                <form id="contact-form" method="post" action="">
+                <form id="contact-form">
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required autocomplete="off"> 
                     <input type="email" name="email" id="email" placeholder="Seu melhor e-mail:" required autocomplete="off">  
-                    <input type="tel" name="celular" id="celular" placeholder="Seu celular / WhatsApp:">
+                    <input type="tel" name="celular" id="celular" placeholder="Seu celular / WhatsApp:" required autocomplete="off">
                     <textarea name="mensagem" id="mensagem" placeholder="Conte um pouco sobre o seu projeto ou ideia..." required></textarea>  
-                    <div class="btn-enviar">
-                        <button type="submit">ENVIAR MENSAGEM <i class="bi bi-send-fill"></i></button>
+
+                    <div class="form-actions-dual">
+                        <button type="submit" class="btn-submit-main" id="btn-submit-both">
+                            <i class="bi bi-whatsapp"></i> <i class="bi bi-envelope-at-fill"></i> ENVIAR PARA E-MAIL & WHATSAPP
+                        </button>
+                        <div class="form-sub-buttons">
+                            <button type="button" id="btn-only-whatsapp" class="btn-alt-send whatsapp-only">
+                                <i class="bi bi-whatsapp"></i> Chamar direto no WhatsApp
+                            </button>
+                            <button type="button" id="btn-only-email" class="btn-alt-send email-only">
+                                <i class="bi bi-envelope-paper-fill"></i> Enviar apenas por E-mail
+                            </button>
+                        </div>
                     </div>
                     <p id="form-feedback" class="form-feedback"></p>
                 </form>
@@ -716,14 +912,18 @@
                     <div class="btn-social">
                         <a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button><i class="bi bi-instagram"></i></button></a>
                         <a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="https://wa.me/5511966076031?text=Olá,%20quero%20mais%20informações" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="https://wa.me/5511966076031?text=Olá,%20vim%20pelo%20seu%20portfólio!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><button><i class="bi bi-whatsapp"></i></button></a>
                     </div>
                 </div>
             </div>
 
             <div class="line-footer borda">
                 <div class="flex">
-                    <p><i class="bi bi-envelope-fill"></i> <a href="mailto:caiogustavolopes20@gmail.com">caiogustavolopes20@gmail.com</a></p>
+                    <p>
+                        <i class="bi bi-envelope-fill"></i> <a href="mailto:caiogustavolopezs@gmail.com">caiogustavolopezs@gmail.com</a>
+                        &nbsp;|&nbsp;
+                        <i class="bi bi-whatsapp"></i> <a href="https://wa.me/5511966076031" target="_blank" rel="noopener noreferrer">(11) 96607-6031</a>
+                    </p>
                     <p class="copyright">© 2026 Caio Lopes (CL DEV). Todos os direitos reservados.</p>
                 </div>
             </div>
