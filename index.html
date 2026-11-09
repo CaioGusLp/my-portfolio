@@ -1,265 +1,1041 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-type="software">
+<html lang="pt-br">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Caio Lopes: desenvolvedor de sites e sistemas web</title>
-<meta name="description" content="Portfólio de Caio Lopes com quatro sistemas reais feitos para a Premiatta, cada um com o banco de dados para montar e consultar no navegador.">
-<meta name="page-type" content="software">
-<meta name="site-kind" content="software">
-<meta name="theme-color" content="#141517">
-<meta property="og:title" content="Caio Lopes: desenvolvedor de sites e sistemas web">
-<meta property="og:description" content="Portfólio de Caio Lopes com quatro sistemas reais feitos para a Premiatta, cada um com o banco de dados para montar e consultar no navegador.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="img/share.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<!-- <link rel="canonical" href="https://SEU-DOMINIO/"> quando o domínio estiver definido -->
-<link rel="icon" href="favicon.ico">
-<link rel="preload" href="fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<link rel="stylesheet" href="css/ui.css">
-<script src="js/site.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Devicon (Símbolos Oficiais das Linguagens e Bancos de Dados) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    <title>CL DEV | Caio Lopes - Portfólio</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo_1.ico">
 </head>
-<body>
-<!-- Página: software · paleta grafite + dourado da marca CL · Geist/Geist Mono · raio reto · hero split · momento: migrações em loop e pulsos no fluxo -->
-<header class="nav">
-  <div class="wrap">
-    <a class="skip-link" href="#top">Pular para o conteúdo</a>
-    <a class="brand" href="index.html"><img src="img/logo-cl-64.png" alt="" width="32" height="32">Caio Lopes</a>
-    <nav class="nav__links" aria-label="Principal"><a href="#projetos">Projetos</a><a href="#banco">Banco</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
-    <a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento</a>
-    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
-    <div class="nav__sheet" id="menu"><a href="#projetos">Projetos</a><a href="#banco">Banco</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento</a></div>
-  </div>
-</header>
-<main id="top">
-<section class="hero" data-enter>
-  <div class="wrap">
-    <div class="hero__text">
-      <span class="label"><span class="dot"></span>Disponível para novos projetos</span>
-      <h1>Sites e sistemas web para empresas, do banco ao deploy</h1>
-      <p class="hero__lead">Sou o Caio, desenvolvedor full-stack. Aqui estão quatro sistemas que construí para a Premiatta, e em cada um você monta o banco de dados migração por migração.</p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn btn--secondary" href="#projetos">Ver os projetos</a>
-      </div>
-      <dl class="facts">
-        <div><dt>Stack principal</dt><dd>PHP, MySQL e JavaScript</dd></div>
-        <div><dt>No ar</dt><dd><a class="link" href="https://premiatta.com" target="_blank" rel="noopener">premiatta.com</a></dd></div>
-      </dl>
-    </div>
-    <div class="hero__art">
-      <div class="frame">
-        <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">premiatta_connect · migrações MySQL</span></div>
-        <div class="frame__body">
-          <div class="mig" data-mig role="img" aria-label="Lista das sete migrações do banco do Premiatta Connect sendo aplicadas em sequência"><div class="mig__row" data-tables="1"><span>001</span><b>usuarios</b><em></em></div><div class="mig__row" data-tables="1"><span>002</span><b>produtos</b><em></em></div><div class="mig__row" data-tables="2"><span>003</span><b>tabelas_preco</b><em></em></div><div class="mig__row" data-tables="2"><span>004</span><b>pedidos</b><em></em></div><div class="mig__row" data-tables="1"><span>005</span><b>erp_sync_log</b><em></em></div><div class="mig__row" data-tables="0"><span>006</span><b>índices</b><em></em></div><div class="mig__row" data-tables="0"><span>007</span><b>dados de exemplo</b><em></em></div>
-            <div class="mig__sum"><span>Tabelas criadas: <b data-mig-tables>0</b> · MySQL 8</span><button class="loop-pause" type="button" data-mig-pause aria-label="Pausar animação"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5h3v11H3zM8 1.5h3v11H8z"/></svg></button></div>
-          </div>
+<body class="loading-lock">
+
+    <!-- =================================================================
+         TELA DE CARREGAMENTO DE CIBERSEGURANÇA
+         ================================================================= -->
+    <div id="cyber-loader" class="cyber-loader">
+        <div class="cyber-grid-bg"></div>
+        <div class="scanline"></div>
+
+        <div class="cyber-terminal">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <span class="terminal-title"><i class="bi bi-shield-lock-fill"></i> CL.DEV // SECURE GATEWAY v4.2</span>
+                <span id="cyber-hex" class="cyber-hex">0x7F9A2C</span>
+            </div>
+
+            <div class="cyber-center-shield">
+                <div class="shield-ring ring-outer"></div>
+                <div class="shield-ring ring-inner"></div>
+                <i class="bi bi-shield-shaded" id="cyber-shield-icon"></i>
+            </div>
+
+            <div class="cyber-status-title" id="cyber-status-title">
+                ESTABELECENDO CONEXÃO CRIPTOGRAFADA...
+            </div>
+
+            <div class="cyber-logs" id="cyber-logs">
+                <div class="log-line"><span class="log-tag">[TLS 1.3]</span> Handshake criptográfico AES-256-GCM iniciado...</div>
+            </div>
+
+            <div class="cyber-progress-wrapper">
+                <div class="cyber-progress-info">
+                    <span id="cyber-step-label">VERIFICANDO FIREWALL & INTEGRIDADE</span>
+                    <span id="cyber-percent">0%</span>
+                </div>
+                <div class="cyber-progress-bar">
+                    <div class="cyber-progress-fill" id="cyber-progress-fill"></div>
+                </div>
+            </div>
+
+            <button id="skip-loader" class="skip-loader-btn">
+                Acessar Imediatamente <i class="bi bi-chevron-double-right"></i>
+            </button>
         </div>
-      </div>
     </div>
-  </div>
-</section>
 
-<section id="projetos" style="--h:2">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Quatro sistemas feitos para a Premiatta</h2>
-      <p>Do site que o cliente vê às ferramentas que a equipe usa todo dia. Cada projeto abre com a tela, as decisões e o banco completo.</p>
-    </div>
-    <div class="projects"><a class="pcard" href="projetos/premiatta-site.html">
-  <div class="pcard__visual" aria-hidden="true">
-<div class="ui-pr" role="img" aria-label="Página de produtos do site da Premiatta com filtro por espécie">
-  <div class="ui-pr__nav"><b>Premiatta</b><span>Home</span><span>Sobre</span><span class="on">Produtos</span><span>Downloads</span><span>Contato</span></div>
-  <div class="ui-pr__head"><h5>Nutrição para <em>cães</em></h5><div class="ui-pr__tabs"><span class="on">Cães</span><span>Gatos</span><span>Pássaros</span></div></div>
-  <div class="ui-pr__grid">
-    <div class="ui-pr__card"><div class="pack" style="--c:#9e2a2b"></div><b>Classic Cães Adultos Carne</b><small>15 kg</small></div>
-    <div class="ui-pr__card"><div class="pack" style="--c:#4d6b3c"></div><b>Classic Cães Filhotes</b><small>10,1 kg</small></div>
-    <div class="ui-pr__card"><div class="pack" style="--c:#1d1a16"></div><b>Premium Cães Sênior</b><small>10,1 kg</small></div>
-  </div>
-</div></div>
-  <div class="pcard__body">
-    <div class="pcard__meta"><span class="label">01 · premiatta.com</span><span class="label">No ar em premiatta.com</span></div>
-    <h3>Site institucional com catálogo e painel admin</h3>
-    <p>Cinco páginas com URLs limpas, catálogo vindo do MySQL e um painel para editar textos e responder contatos.</p>
-    <div class="pcard__foot"><div class="chips"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Hostinger</span></div><span class="go">Ver projeto e banco</span></div>
-  </div>
-</a><a class="pcard" href="projetos/premiatta-connect.html">
-  <div class="pcard__visual" aria-hidden="true">
-<div class="ui-cn" role="img" aria-label="Simulador de pedidos do Premiatta Connect com preços da tabela do cliente">
-  <div class="ui-cn__top"><b>Novo pedido</b><div class="ui-cn__who"><span class="ui-cn__tag">Varejo interior</span><i>VV</i>Agropecuária Vale Verde</div></div>
-  <table>
-    <thead><tr><th class="c">Código</th><th>Produto</th><th class="r">Preço</th><th>Qtd</th><th class="r">Subtotal</th></tr></thead>
-    <tbody>
-      <tr><td class="c">CL-CA15</td><td>Classic Cães Adultos 15 kg</td><td class="r">131,90</td><td><span class="qty"><span>−</span><b>12</b><span>+</span></span></td><td class="r">1.582,80</td></tr>
-      <tr><td class="c">CL-GA10</td><td>Classic Gatos Adultos 10,1 kg</td><td class="r">117,20</td><td><span class="qty"><span>−</span><b>9</b><span>+</span></span></td><td class="r">1.054,80</td></tr>
-      <tr><td class="c">CL-CF10</td><td>Classic Cães Filhotes 10,1 kg</td><td class="r">108,50</td><td><span class="qty"><span>−</span><b>0</b><span>+</span></span></td><td class="r">0,00</td></tr>
-    </tbody>
-  </table>
-  <div class="ui-cn__foot"><div><small>Total · 270,9 kg · 28 dias</small><strong>R$ 2.637,60</strong></div><span class="ui-cn__send">Enviar ao ERP</span></div>
-</div></div>
-  <div class="pcard__body">
-    <div class="pcard__meta"><span class="label">02 · Premiatta Connect</span><span class="label">Uso interno da Premiatta</span></div>
-    <h3>Portal de pedidos B2B com preço por cliente</h3>
-    <p>Cada login vê a própria tabela de preço, monta o pedido no simulador e envia para o ERP Ti9.</p>
-    <div class="pcard__foot"><div class="chips"><span>PHP</span><span>MySQL</span><span>API Ti9</span><span>Hostinger</span></div><span class="go">Ver projeto e banco</span></div>
-  </div>
-</a><a class="pcard" href="projetos/roteirizador.html">
-  <div class="pcard__visual" aria-hidden="true">
-<div class="ui-rt" role="img" aria-label="Dashboard do roteirizador com pendências por cidade e a ordem das paradas da rota">
-  <div class="ui-rt__kpis">
-    <div class="ui-rt__kpi"><small>Pedidos a faturar</small><b>7</b></div>
-    <div class="ui-rt__kpi" style="--k:#ffb84d"><small>Peso pendente</small><b>1.789 kg</b></div>
-    <div class="ui-rt__kpi" style="--k:#00cc66"><small>Faturamento</small><b>R$ 16,2 mil</b></div>
-  </div>
-  <div class="ui-rt__body">
-    <div class="ui-rt__cities">
-      <div class="ui-rt__city"><header>Casa Branca - SP<span>Mogiana</span></header><p>Peso restante <b>652,0 kg</b></p><span class="in">+ Add ao carrinho</span></div>
-      <div class="ui-rt__city"><header>Pouso Alegre - MG<span>Sul de Minas</span></header><p>Peso restante <b>502,2 kg</b></p><span class="in">+ Add ao carrinho</span></div>
-    </div>
-    <div class="ui-rt__map"><small>Ordem da rota</small>
-      <div class="ui-rt__stop"><i>1</i><span>Pet Shop Bom Amigo<em>Itatiba - SP</em></span></div>
-      <div class="ui-rt__stop"><i>2</i><span>Agropecuária Vale Verde<em>Morungaba - SP · 100 + 777</em></span></div>
-      <div class="ui-rt__totals"><span>Distância <b>214,6 km</b></span><span>Tempo <b>4h 07min</b></span></div>
-    </div>
-  </div>
-</div></div>
-  <div class="pcard__body">
-    <div class="pcard__meta"><span class="label">03 · Roteirizador</span><span class="label">Em uso pela logística</span></div>
-    <h3>Dashboard de roteirização de pedidos</h3>
-    <p>Importa as pendências do Ti9, agrupa por cidade, monta a carga e ordena as paradas no Google Maps.</p>
-    <div class="pcard__foot"><div class="chips"><span>JavaScript</span><span>Google Maps</span><span>SheetJS</span><span>Vercel</span></div><span class="go">Ver projeto e banco</span></div>
-  </div>
-</a><a class="pcard" href="projetos/ordem-servico.html">
-  <div class="pcard__visual" aria-hidden="true">
-<div class="ui-os" role="img" aria-label="Ordem de serviço aguardando verificação, com checklist de liberação da linha">
-  <div class="ui-os__head"><b>OS-2026-0142</b><span class="ui-os__prio">Prioridade média</span></div>
-  <div class="ui-os__track"><span class="done">Aberta</span><span class="done">Execução</span><span class="now">Verificação</span><span>Fechada</span></div>
-  <div class="ui-os__card">
-    <div><small>Equipamento</small>EXT-01 · Extrusora principal</div>
-    <div><small>Tipo</small>Preventiva</div>
-    <div class="full"><small>Serviço realizado</small>Facas trocadas e matriz limpa.</div>
-  </div>
-  <div class="ui-os__check"><small>Liberação BPF</small>
-    <label><i class="on">✓</i>Limpeza da área conferida</label>
-    <label><i class="on">✓</i>Ferramentas recolhidas</label>
-    <label><i></i>Linha liberada para produção</label>
-  </div>
-  <span class="ui-os__sign">Assinar e liberar linha</span>
-</div></div>
-  <div class="pcard__body">
-    <div class="pcard__meta"><span class="label">04 · Ordem de Serviço</span><span class="label">Em desenvolvimento</span></div>
-    <h3>Ordem de serviço digital para manutenção com BPF</h3>
-    <p>Troca a planilha de OS por um sistema com papéis, verificação obrigatória e trilha para auditoria.</p>
-    <div class="pcard__foot"><div class="chips"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Hostinger</span></div><span class="go">Ver projeto e banco</span></div>
-  </div>
-</a></div>
-  </div>
-</section>
+    <!-- Efeitos de luz de fundo -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
 
-<section id="banco" class="alt">
-  <div class="wrap split">
-    <div class="split__text">
-      <h2>Cada projeto com o banco de dados aberto</h2>
-      <p>Na página de cada projeto o banco é montado na sua frente, na ordem em que eu o criei. Tudo roda no seu navegador, com SQLite.</p>
-      <ol class="points">
-        <li><span class="n">01</span><div><strong>Migrações em ordem</strong><span>Do primeiro CREATE TABLE aos dados de exemplo, com o motivo de cada passo.</span></div></li>
-        <li><span class="n">02</span><div><strong>Esquema desenhado a cada passo</strong><span>Tabelas, chaves primárias e estrangeiras aparecem conforme você aplica.</span></div></li>
-        <li><span class="n">03</span><div><strong>Console com consultas prontas</strong><span>SELECTs de verdade sobre os dados, para rodar e alterar.</span></div></li>
-      </ol>
-      <div class="btn-row" style="margin-top:32px"><a class="btn btn--secondary" href="projetos/premiatta-connect.html#banco">Montar o banco do Connect <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></div>
-    </div>
-    <div class="split__visual">
-      <div class="frame">
-        <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">esquema · premiatta_connect</span></div>
-        <div class="frame__body" style="padding:20px;background:var(--bg)">
-          <div class="schema" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))" role="img" aria-label="Três tabelas do banco do Premiatta Connect: usuarios, pedidos e pedido_itens, ligadas por chaves estrangeiras">
-            <article class="tbl"><header><h4>usuarios</h4><span>5 linhas</span></header><ul>
-              <li><span class="key key--pk">PK</span><span class="col__name">id</span><span class="col__type">integer</span></li>
-              <li><span class="key"></span><span class="col__name">nome</span><span class="col__type">varchar(140)</span></li>
-              <li><span class="key"></span><span class="col__name">perfil</span><span class="col__type">enum</span></li>
-              <li><span class="key key--fk">FK</span><span class="col__name">tabela_preco_id</span><span class="col__type">→ tabelas_preco</span></li></ul></article>
-            <article class="tbl"><header><h4>pedidos</h4><span>3 linhas</span></header><ul>
-              <li><span class="key key--pk">PK</span><span class="col__name">id</span><span class="col__type">integer</span></li>
-              <li><span class="key key--fk">FK</span><span class="col__name">usuario_id</span><span class="col__type">→ usuarios</span></li>
-              <li><span class="key"></span><span class="col__name">status</span><span class="col__type">enum</span></li>
-              <li><span class="key"></span><span class="col__name">erp_numero</span><span class="col__type">varchar(20)</span></li></ul></article>
-            <article class="tbl"><header><h4>pedido_itens</h4><span>5 linhas</span></header><ul>
-              <li><span class="key key--pk">PK</span><span class="col__name">id</span><span class="col__type">integer</span></li>
-              <li><span class="key key--fk">FK</span><span class="col__name">pedido_id</span><span class="col__type">→ pedidos</span></li>
-              <li><span class="key key--fk">FK</span><span class="col__name">produto_id</span><span class="col__type">→ produtos</span></li>
-              <li><span class="key"></span><span class="col__name">preco_unit</span><span class="col__type">decimal(10,2)</span></li></ul></article>
-            <article class="tbl"><header><h4>erp_sync_log</h4><span>4 linhas</span></header><ul>
-              <li><span class="key key--pk">PK</span><span class="col__name">id</span><span class="col__type">integer</span></li>
-              <li><span class="key key--fk">FK</span><span class="col__name">pedido_id</span><span class="col__type">→ pedidos</span></li>
-              <li><span class="key"></span><span class="col__name">http_status</span><span class="col__type">int</span></li>
-              <li><span class="key"></span><span class="col__name">resposta</span><span class="col__type">json</span></li></ul></article>
-          </div>
+    <header id="header">
+        <div class="interface">
+            <div class="logo">
+                <a href="#topo-do-site">
+                    <img src="images/Logo_1.png" alt="Logo CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <span class="logo-fallback" style="display:none;">CL<span>.DEV</span></span>
+                </a>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#topo-do-site">Início</a></li>
+                    <li><a href="#linguagens">Linguagens & BD</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#portfolio">Projetos & Apps</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#formulario">
+                    <button><i class="bi bi-send-fill"></i> Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar" id="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#topo-do-site">Início</a></li>
+                        <li><a href="#linguagens">Linguagens & BD</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#destaques">Destaques</a></li>
+                        <li><a href="#portfolio">Projetos & Apps</a></li>
+                        <li><a href="#formulario">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section id="processo">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Como um projeto anda</h2>
-      <p>Quatro etapas, com algo funcionando para você testar ao fim de cada uma.</p>
-    </div>
-    <div class="process">
-      <div class="process__line" aria-hidden="true"><i></i></div>
-      <div class="pstep"><span class="pstep__n">01</span><h3>Conversa e escopo</h3><p>Entendo o processo de hoje, muitas vezes uma planilha, e listo o que o sistema precisa fazer.</p></div>
-      <div class="pstep"><span class="pstep__n">02</span><h3>Modelo do banco</h3><p>Desenho tabelas e relações antes da primeira tela. É a decisão que mais muda o resto.</p></div>
-      <div class="pstep"><span class="pstep__n">03</span><h3>Telas e API</h3><p>Interface em HTML, CSS e JavaScript falando com uma API em PHP ou Node.</p></div>
-      <div class="pstep"><span class="pstep__n">04</span><h3>Publicação e ajustes</h3><p>Coloco no ar na Hostinger ou na Vercel e sigo ajustando com quem usa.</p></div>
-    </div>
-    <div class="process-note">
-      <div class="frame">
-        <div class="flow" role="img" aria-label="Fluxo do Premiatta Connect: navegador, api.php, banco MySQL e ERP Ti9">
-          <div class="flow__node"><b>Navegador</b><small>simulador de pedidos</small></div><span class="flow__wire"></span>
-          <div class="flow__node"><b>api.php</b><small>login, preço, pedido</small></div><span class="flow__wire"></span>
-          <div class="flow__node flow__node--key"><b>MySQL</b><small>7 tabelas</small></div><span class="flow__wire"></span>
-          <div class="flow__node"><b>ERP Ti9</b><small>API AFV</small></div>
+    <main>
+        <!-- TOPO DO SITE / HERO -->
+        <section class="topo-do-site" id="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <div class="badge-tech">
+                            <span class="pulse-dot"></span> Full-Stack, Banco de Dados & Segurança
+                        </div>
+                        <h1>TRANSFORMANDO CÓDIGO E DESIGN EM SOLUÇÕES INTELIGENTES<span>.</span></h1>
+                        <p>Desenvolvo softwares, aplicativos, sites e sistemas digitais completos, alinhando design moderno, bancos de dados estruturados e tecnologia avançada. Minha atuação abrange desde soluções web dinâmicas até aplicações personalizadas com foco em performance, segurança e experiência do usuário.</p>
+
+                        <div class="btns-cta">
+                            <a class="btn btn-primary-custom" href="#formulario">
+                                Entre em contato <i class="bi bi-arrow-up-right-circle-fill"></i>
+                            </a>
+                            <a class="btn btn-outline-custom" href="CaioLopesDevATT.pdf" download target="_blank" rel="noopener">
+                                Meu currículo <i class="bi bi-filetype-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="img-topo-site">
+                        <div class="hero-visual-wrapper">
+                            <img src="images/fox_progr.png" alt="Imagem Topo do Site" onerror="this.src='https://placehold.co/450x450/111111/ffa500?text=CL+DEV'">
+                            <div class="floating-card card-code">
+                                <i class="bi bi-database-fill-check"></i>
+                                <div>
+                                    <strong>Full-Stack & BD</strong>
+                                    <small>SQL & NoSQL</small>
+                                </div>
+                            </div>
+                            <div class="floating-card card-ui">
+                                <i class="bi bi-shield-check"></i>
+                                <div>
+                                    <strong>Apps & Web</strong>
+                                    <small>Arquitetura Segura</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LINGUAGENS, TECNOLOGIAS & BANCOS DE DADOS (COM CORES E SÍMBOLOS OFICIAIS) -->
+        <section class="linguagens-sec" id="linguagens">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">STACK TECNOLÓGICA</span>
+                    <h2 class="titulo">LINGUAGENS & <span>BANCOS DE DADOS.</span></h2>
+                    <p class="section-desc">Domínio em tecnologias modernas de Front-end, Back-end e modelagem de Bancos de Dados relacionais (SQL) e não-relacionais (NoSQL).</p>
+                </div>
+
+                <div class="tech-grid">
+                    <!-- HTML5 -->
+                    <div class="tech-card" style="--tech-color: #E34F26;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>HTML5</h4>
+                            <span class="tech-badge">Front-end</span>
+                        </div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="tech-card" style="--tech-color: #1572B6;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>CSS3</h4>
+                            <span class="tech-badge">Estilização & UI</span>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="tech-card" style="--tech-color: #F7DF1E;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-javascript-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>JavaScript</h4>
+                            <span class="tech-badge">ES6+ / Interatividade</span>
+                        </div>
+                    </div>
+
+                    <!-- TypeScript -->
+                    <div class="tech-card" style="--tech-color: #3178C6;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-typescript-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>TypeScript</h4>
+                            <span class="tech-badge">Tipagem Forte</span>
+                        </div>
+                    </div>
+
+                    <!-- React -->
+                    <div class="tech-card" style="--tech-color: #61DAFB;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-react-original"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>React</h4>
+                            <span class="tech-badge">Web & Mobile UI</span>
+                        </div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="tech-card" style="--tech-color: #339933;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-nodejs-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Node.js</h4>
+                            <span class="tech-badge">Back-end & APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="tech-card" style="--tech-color: #3776AB;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-python-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Python</h4>
+                            <span class="tech-badge">Automação & IA</span>
+                        </div>
+                    </div>
+
+                    <!-- PostgreSQL (BD) -->
+                    <div class="tech-card" style="--tech-color: #4169E1;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-postgresql-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>PostgreSQL</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco de Dados SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- MySQL (BD) -->
+                    <div class="tech-card" style="--tech-color: #00758F;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-mysql-original"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>MySQL</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco Relacional</span>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB (BD) -->
+                    <div class="tech-card" style="--tech-color: #47A248;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-mongodb-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>MongoDB</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-database"></i> Banco NoSQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Firebase / Cloud DB (BD) -->
+                    <div class="tech-card" style="--tech-color: #FFCA28;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-firebase-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Firebase DB</h4>
+                            <span class="tech-badge bd-badge"><i class="bi bi-cloud-check"></i> Realtime Cloud BD</span>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="tech-card" style="--tech-color: #F05032;">
+                        <div class="tech-icon-wrap">
+                            <i class="devicon-git-plain"></i>
+                        </div>
+                        <div class="tech-meta">
+                            <h4>Git & GitHub</h4>
+                            <span class="tech-badge">Versionamento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPECIALIDADES -->
+        <section class="especialidades" id="especialidades">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">O QUE EU FAÇO</span>
+                    <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                </div>
+                <div class="grid-especialidades">
+                    <div class="especialidades-box">
+                        <div class="icon-box">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+                        <h3>Sistemas & Websites</h3>
+                        <p>Sistemas web completos, como plataformas para estacionamento rotativo com design responsivo, informações claras sobre tarifas e planos, além de integração com banco de dados para reservas e gestão online.</p>
+                        <div class="box-tags">
+                            <span>Web App</span>
+                            <span>Banco de Dados</span>
+                            <span>Responsivo</span>
+                        </div>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <div class="icon-box">
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+                        <h3>Loja Online & E-Commerce</h3>
+                        <p>Lojas virtuais desenvolvidas com foco em usabilidade e conversão, oferecendo navegação intuitiva, controle de estoque em banco de dados e integração com meios de pagamento seguros.</p>
+                        <div class="box-tags">
+                            <span>Checkout Pix</span>
+                            <span>Alta Conversão</span>
+                            <span>Catálogo SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="especialidades-box">
+                        <div class="icon-box">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3>Interfaces de Apps & Blogs</h3>
+                        <p>Aplicações móveis e plataformas de conteúdo estruturadas para oferecer leitura fluida, interatividade rápida e uma experiência de usuário moderna em qualquer dispositivo.</p>
+                        <div class="box-tags">
+                            <span>UI/UX Mobile</span>
+                            <span>SEO</span>
+                            <span>Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <div class="profile-frame">
+                            <img src="images/eu.png" alt="Caio Lopes" onerror="this.src='https://placehold.co/360x360/161616/ffa500?text=Caio+Lopes'">
+                            <div class="status-badge">
+                                <span class="online-dot"></span> Disponível para projetos
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="txt-sobre">
+                        <span class="subtitulo">QUEM SOU EU</span>
+                        <h2>MUITO PRAZER, <span>SOU CAIO LOPES.</span></h2>
+                        <p>Sou um desenvolvedor apaixonado por criar soluções digitais que unem design de alto nível, segurança e funcionalidade sólida. Com experiência em Front-end, Back-end, Bancos de Dados (SQL e NoSQL) e frameworks modernos, transformo ideias em experiências online envolventes e eficientes.</p>
+                        <p>Fora do mundo do código, sou um entusiasta de tecnologia, cibersegurança e inteligência artificial, sempre explorando novas tendências e ferramentas que possam aprimorar meu trabalho. Acredito que a combinação de criatividade e técnica é a chave para desenvolver soluções digitais impactantes.</p>
+
+                        <div class="sobre-stats">
+                            <div class="stat-item">
+                                <strong>100%</strong>
+                                <span>Foco em Performance</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>Full-Stack</strong>
+                                <span>Front, Back & BD</span>
+                            </div>
+                            <div class="stat-item">
+                                <strong>SecOps</strong>
+                                <span>Código Seguro</span>
+                            </div>
+                        </div>
+
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://wa.me/5511966076031?text=Olá,%20quero%20mais%20informações" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><button><i class="bi bi-whatsapp"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS EM DESTAQUE: SITE REAL + PROJETO DE BANCO DE DADOS -->
+        <section class="destaques" id="destaques">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">PROJETOS EM DESTAQUE</span>
+                    <h2 class="titulo">SITES & <span>BANCO DE DADOS.</span></h2>
+                    <p class="section-desc">Um site institucional no ar e um projeto completo de banco de dados que você pode montar e consultar aqui mesmo, no navegador.</p>
+                </div>
+
+                <div class="featured-grid">
+
+                    <!-- DESTAQUE 1: PREMIATTA.COM -->
+                    <article class="featured-card">
+                        <div class="browser-mockup">
+                            <div class="browser-bar">
+                                <div class="terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                                <span class="browser-url"><i class="bi bi-lock-fill"></i> premiatta.com</span>
+                            </div>
+                            <div class="browser-body">
+                                <!-- Coloque aqui um print real do site: images/projetos/premiatta.webp (1280x800). Sem o arquivo, aparece a tela em HTML abaixo. -->
+                                <img class="browser-shot" src="images/projetos/premiatta.webp" alt="Página inicial do site premiatta.com" onerror="this.remove()">
+                                <div class="site-preview" aria-hidden="true">
+                                    <div class="sp-nav"><b>Premiatta</b><span>Home</span><span>Sobre</span><span class="on">Produtos</span><span>Downloads</span><span>Contato</span></div>
+                                    <div class="sp-hero">
+                                        <small>Linha Classic</small>
+                                        <h4>Nutrição premium para <em>cães</em> e gatos</h4>
+                                        <div class="sp-tabs"><span class="on">Cães</span><span>Gatos</span><span>Pássaros</span></div>
+                                    </div>
+                                    <div class="sp-grid">
+                                        <div><i style="--c:#9e2a2b"></i><b>Classic Cães Adultos</b><small>15 kg</small></div>
+                                        <div><i style="--c:#4d6b3c"></i><b>Classic Filhotes</b><small>10,1 kg</small></div>
+                                        <div><i style="--c:#1d1a16"></i><b>Premium Sênior</b><small>10,1 kg</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <div class="project-tags">
+                                <span>HTML / CSS / JS</span>
+                                <span>PHP</span>
+                                <span>Hostinger</span>
+                            </div>
+                            <h3>Premiatta — Site Institucional</h3>
+                            <p>Site da Premiatta, marca de alimentos premium para pets: páginas de produtos, downloads e contato, URLs limpas e painel administrativo para a equipe atualizar o conteúdo.</p>
+                            <ul class="featured-list">
+                                <li><i class="bi bi-check2-circle"></i> Design e desenvolvimento do zero</li>
+                                <li><i class="bi bi-check2-circle"></i> Painel admin para textos e contatos</li>
+                                <li><i class="bi bi-check2-circle"></i> Imagens otimizadas em WebP</li>
+                            </ul>
+                            <a class="btn btn-primary-custom" href="https://premiatta.com" target="_blank" rel="noopener">
+                                Visitar premiatta.com <i class="bi bi-arrow-up-right-circle-fill"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- DESTAQUE 2: DEVFOOD DATABASE -->
+                    <article class="featured-card">
+                        <div class="db-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                                <span class="terminal-title"><i class="bi bi-database-fill"></i> devfood_db — console SQL</span>
+                            </div>
+<pre class="db-code"><span class="k">SELECT</span> restaurante, pedidos_entregues,
+       faturamento, ticket_medio, nota_media
+  <span class="k">FROM</span> vw_desempenho_restaurante
+ <span class="k">ORDER BY</span> faturamento <span class="k">DESC</span>;</pre>
+                            <div class="db-result-wrap">
+                                <table class="db-result">
+                                    <thead><tr><th>restaurante</th><th>pedidos</th><th>faturamento</th><th>ticket</th><th>nota</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Kaze Sushi</td><td>55</td><td>11.068,82</td><td>201,25</td><td>3,73</td></tr>
+                                        <tr><td>Forno da Vila</td><td>55</td><td>8.353,06</td><td>151,87</td><td>3,68</td></tr>
+                                        <tr><td>Brasa 61 Burger</td><td>56</td><td>6.011,30</td><td>107,34</td><td>3,86</td></tr>
+                                        <tr><td>Taco Loco</td><td>55</td><td>4.629,89</td><td>84,18</td><td>3,80</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-stats">
+                                <span><b>14</b> tabelas</span><span><b>5</b> triggers</span><span><b>2</b> views</span><span><b>360</b> pedidos</span>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <div class="project-tags">
+                                <span>SQL</span>
+                                <span>Modelagem</span>
+                                <span>SQLite / MySQL</span>
+                            </div>
+                            <h3>DevFood DB — Banco de Dados de Delivery</h3>
+                            <p>Projeto de banco de dados de uma plataforma de delivery, criado do zero: modelagem normalizada, regras no próprio banco e consultas analíticas. Os dados são fictícios.</p>
+                            <ul class="featured-list">
+                                <li><i class="bi bi-check2-circle"></i> Chaves, CHECK, UNIQUE e índice parcial</li>
+                                <li><i class="bi bi-check2-circle"></i> Triggers, views e coluna calculada</li>
+                                <li><i class="bi bi-check2-circle"></i> CTE recursiva e funções de janela</li>
+                            </ul>
+                            <a class="btn btn-primary-custom" href="projetos/devfood-banco.html">
+                                Explorar o banco ao vivo <i class="bi bi-database-fill-gear"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFÓLIO COM TELAS INTERATIVAS DE APPS -->
+        <section class="portfolio" id="portfolio">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">EXPERIÊNCIA INTERATIVA</span>
+                    <h2 class="titulo">PROJETOS & <span>TELAS DE APPS.</span></h2>
+                    <p class="section-desc">Interaja com as telas abaixo: clique nas abas inferiores de cada smartphone para navegar pelas diferentes telas das aplicações.</p>
+                </div>
+
+                <!-- Filtros de categoria -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos os Apps</button>
+                    <button class="filter-btn" data-filter="fintech">Fintech & Crédito</button>
+                    <button class="filter-btn" data-filter="delivery">Delivery & Food</button>
+                    <button class="filter-btn" data-filter="mobility">Estacionamento</button>
+                    <button class="filter-btn" data-filter="ai">SaaS, BD & Cloud</button>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJETO 1: FINTECH / BANCO DIGITAL -->
+                    <article class="project-card" data-category="fintech">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-statusbar">
+                                <span>09:41</span>
+                                <div class="status-icons">
+                                    <i class="bi bi-reception-4"></i>
+                                    <i class="bi bi-wifi"></i>
+                                    <i class="bi bi-battery-full"></i>
+                                </div>
+                            </div>
+
+                            <div class="app-screens">
+                                <!-- Tela 1: Carteira & Cartão -->
+                                <div class="app-screen active" data-screen="1">
+                                    <div class="app-top-bar">
+                                        <div>
+                                            <small>Olá, Caio</small>
+                                            <strong>FinPay Black</strong>
+                                        </div>
+                                        <i class="bi bi-bell"></i>
+                                    </div>
+                                    <div class="fintech-balance">
+                                        <span>Saldo disponível</span>
+                                        <h4>R$ 14.850,90</h4>
+                                    </div>
+                                    <div class="credit-card-ui">
+                                        <div class="cc-top">
+                                            <span>FINPAY PLATINUM</span>
+                                            <i class="bi bi-wifi"></i>
+                                        </div>
+                                        <div class="cc-number">•••• •••• •••• 4829</div>
+                                        <div class="cc-bottom">
+                                            <span>CAIO G LOPES</span>
+                                            <span>08/29</span>
+                                        </div>
+                                    </div>
+                                    <div class="app-quick-actions">
+                                        <div><i class="bi bi-qr-code-scan"></i><span>Pix</span></div>
+                                        <div><i class="bi bi-upc-scan"></i><span>Pagar</span></div>
+                                        <div><i class="bi bi-graph-up-arrow"></i><span>Investir</span></div>
+                                        <div><i class="bi bi-shield-lock"></i><span>Cartão</span></div>
+                                    </div>
+                                </div>
+
+                                <!-- Tela 2: Analytics de Gastos -->
+                                <div class="app-screen" data-screen="2">
+                                    <div class="app-top-bar">
+                                        <strong>Análise de Fatura</strong>
+                                        <span class="tag-pill">Outubro</span>
+                                    </div>
+                                    <div class="chart-bars">
+                                        <div class="bar-col"><div class="bar" style="height: 45%"></div><span>Mai</span></div>
+                                        <div class="bar-col"><div class="bar" style="height: 65%"></div><span>Jun</span></div>
+                                        <div class="bar-col"><div class="bar" style="height: 50%"></div><span>Jul</span></div>
+                                        <div class="bar-col"><div class="bar" style="height: 85%"></div><span>Ago</span></div>
+                                        <div class="bar-col"><div class="bar active" style="height: 70%"></div><span>Set</span></div>
+                                    </div>
+                                    <div class="tx-list">
+                                        <div class="tx-item">
+                                            <i class="bi bi-cloud-check"></i>
+                                            <div><strong>Google Cloud</strong><small>Assinatura</small></div>
+                                            <span>-R$ 142,00</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-bag-check"></i>
+                                            <div><strong>Mercado Livre</strong><small>Compra Pix</small></div>
+                                            <span>-R$ 219,90</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-arrow-down-left-circle"></i>
+                                            <div><strong>Transferência Recebida</strong><small>Projeto Dev</small></div>
+                                            <span class="positive">+R$ 3.500,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tela 3: Área Pix -->
+                                <div class="app-screen" data-screen="3">
+                                    <div class="app-top-bar">
+                                        <strong>Transferência Pix</strong>
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <div class="pix-box">
+                                        <small>Valor da transferência</small>
+                                        <h3>R$ 450,00</h3>
+                                        <div class="pix-key-input">Chave: CNPJ / E-mail / Celular</div>
+                                        <div class="pix-dest">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <div>
+                                                <strong>Pagamento Instantâneo</strong>
+                                                <small>Taxa R$ 0,00 • Criptografado</small>
+                                            </div>
+                                        </div>
+                                        <div class="fake-app-btn">Confirmar Envio Pix</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phone-tabbar">
+                                <button class="screen-btn active" data-target="1"><i class="bi bi-wallet2"></i><span>Carteira</span></button>
+                                <button class="screen-btn" data-target="2"><i class="bi bi-bar-chart-line"></i><span>Gastos</span></button>
+                                <button class="screen-btn" data-target="3"><i class="bi bi-lightning-charge"></i><span>Pix</span></button>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Fintech UI</span>
+                                <span>PostgreSQL</span>
+                                <span>API Pix</span>
+                            </div>
+                            <h3>FinPay — App de Crédito & Banco Digital</h3>
+                            <p>Aplicação financeira com gestão de cartão virtual, banco de dados transacional seguro e fluxo completo de pagamentos instantâneos.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 2: DELIVERY / PIZZARIA APP -->
+                    <article class="project-card" data-category="delivery">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-statusbar">
+                                <span>19:30</span>
+                                <div class="status-icons">
+                                    <i class="bi bi-reception-4"></i>
+                                    <i class="bi bi-wifi"></i>
+                                    <i class="bi bi-battery-full"></i>
+                                </div>
+                            </div>
+
+                            <div class="app-screens">
+                                <!-- Tela 1: Cardápio -->
+                                <div class="app-screen active" data-screen="1">
+                                    <div class="app-top-bar">
+                                        <div>
+                                            <small><i class="bi bi-geo-alt-fill"></i> Entrega em 25 min</small>
+                                            <strong>Forno & Código Pizza</strong>
+                                        </div>
+                                        <i class="bi bi-bag-heart"></i>
+                                    </div>
+                                    <div class="food-promo-banner">
+                                        <div>
+                                            <span class="promo-badge">PROMO 20% OFF</span>
+                                            <h5>Pizza Artesanal Pepperoni</h5>
+                                            <small>Massa de fermentação natural</small>
+                                        </div>
+                                        <i class="bi bi-fire"></i>
+                                    </div>
+                                    <div class="food-list">
+                                        <div class="food-item">
+                                            <div class="food-icon"><i class="bi bi-disc"></i></div>
+                                            <div class="food-details">
+                                                <strong>Supreme Trufada (G)</strong>
+                                                <small>★ 4.9 • Mussarela, pepperoni</small>
+                                                <span class="price">R$ 68,90</span>
+                                            </div>
+                                            <div class="add-btn">+</div>
+                                        </div>
+                                        <div class="food-item">
+                                            <div class="food-icon"><i class="bi bi-disc"></i></div>
+                                            <div class="food-details">
+                                                <strong>Quatro Queijos Especial</strong>
+                                                <small>★ 4.8 • Gorgonzola e parmesão</small>
+                                                <span class="price">R$ 62,00</span>
+                                            </div>
+                                            <div class="add-btn">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tela 2: Carrinho -->
+                                <div class="app-screen" data-screen="2">
+                                    <div class="app-top-bar">
+                                        <strong>Seu Pedido</strong>
+                                        <span class="tag-pill">2 itens</span>
+                                    </div>
+                                    <div class="cart-summary">
+                                        <div class="cart-row">
+                                            <span>1x Pizza Supreme (G)</span>
+                                            <strong>R$ 68,90</strong>
+                                        </div>
+                                        <div class="cart-row">
+                                            <span>1x Borda Recheada</span>
+                                            <strong>R$ 12,00</strong>
+                                        </div>
+                                        <div class="cart-row discount">
+                                            <span>Cupom DEV10</span>
+                                            <strong>-R$ 8,00</strong>
+                                        </div>
+                                        <div class="cart-row total">
+                                            <span>Total com Entrega</span>
+                                            <strong>R$ 72,90</strong>
+                                        </div>
+                                    </div>
+                                    <div class="fake-app-btn">Finalizar Pedido</div>
+                                </div>
+
+                                <!-- Tela 3: Rastreamento -->
+                                <div class="app-screen" data-screen="3">
+                                    <div class="app-top-bar">
+                                        <strong>Pedido #4092</strong>
+                                        <span class="tag-pill">Em rota</span>
+                                    </div>
+                                    <div class="delivery-tracker">
+                                        <div class="track-step done">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <div><strong>Pedido Confirmado</strong><small>19:32 • Pagamento aprovado</small></div>
+                                        </div>
+                                        <div class="track-step done">
+                                            <i class="bi bi-fire"></i>
+                                            <div><strong>Forno a Lenha</strong><small>19:40 • Preparo concluído</small></div>
+                                        </div>
+                                        <div class="track-step current">
+                                            <i class="bi bi-scooter"></i>
+                                            <div><strong>Saiu para Entrega</strong><small>Chega em 6 minutos</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phone-tabbar">
+                                <button class="screen-btn active" data-target="1"><i class="bi bi-grid"></i><span>Cardápio</span></button>
+                                <button class="screen-btn" data-target="2"><i class="bi bi-cart3"></i><span>Carrinho</span></button>
+                                <button class="screen-btn" data-target="3"><i class="bi bi-geo-alt"></i><span>Rastreio</span></button>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Mobile Commerce</span>
+                                <span>SQL</span>
+                                <span>Node.js</span>
+                            </div>
+                            <h3>DevFood — App de Delivery & Pizzaria</h3>
+                            <p>Plataforma completa de pedidos online com cardápio dinâmico integrado a banco de dados, cálculo de cupons e rastreio de entrega em tempo real.</p>
+                            <a class="project-link" href="projetos/devfood-banco.html"><i class="bi bi-database-fill"></i> Ver o banco de dados deste app</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 3: ESTACIONAMENTO ROTATIVO APP -->
+                    <article class="project-card" data-category="mobility">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-statusbar">
+                                <span>14:15</span>
+                                <div class="status-icons">
+                                    <i class="bi bi-reception-4"></i>
+                                    <i class="bi bi-wifi"></i>
+                                    <i class="bi bi-battery-full"></i>
+                                </div>
+                            </div>
+
+                            <div class="app-screens">
+                                <!-- Tela 1: Mapa de Vagas -->
+                                <div class="app-screen active" data-screen="1">
+                                    <div class="app-top-bar">
+                                        <div>
+                                            <small>Zona Azul Digital</small>
+                                            <strong>ParkSmart Rotativo</strong>
+                                        </div>
+                                        <i class="bi bi-car-front-fill"></i>
+                                    </div>
+                                    <div class="parking-grid">
+                                        <div class="park-spot free"><span>A-01</span><small>Livre</small></div>
+                                        <div class="park-spot busy"><span>A-02</span><small>Ocupado</small></div>
+                                        <div class="park-spot free"><span>A-03</span><small>Livre</small></div>
+                                        <div class="park-spot free"><span>B-01</span><small>Livre</small></div>
+                                    </div>
+                                    <div class="vehicle-card">
+                                        <i class="bi bi-car-front"></i>
+                                        <div>
+                                            <strong>Placa: BRA-2E26</strong>
+                                            <small>Setor Centro • R$ 3,50/hora</small>
+                                        </div>
+                                    </div>
+                                    <div class="fake-app-btn">Ativar Ticket Digital</div>
+                                </div>
+
+                                <!-- Tela 2: Cronômetro Ativo -->
+                                <div class="app-screen" data-screen="2">
+                                    <div class="app-top-bar">
+                                        <strong>Ticket Ativo</strong>
+                                        <span class="tag-pill">Vaga A-01</span>
+                                    </div>
+                                    <div class="timer-circle">
+                                        <small>Tempo Restante</small>
+                                        <h3>01:42:18</h3>
+                                        <span>Expira às 16:00</span>
+                                    </div>
+                                    <div class="fake-app-btn">+ Renovar 1 Hora</div>
+                                </div>
+
+                                <!-- Tela 3: Créditos e Planos -->
+                                <div class="app-screen" data-screen="3">
+                                    <div class="app-top-bar">
+                                        <strong>Tarifas & Créditos</strong>
+                                        <i class="bi bi-credit-card"></i>
+                                    </div>
+                                    <div class="tx-list">
+                                        <div class="tx-item">
+                                            <i class="bi bi-clock-history"></i>
+                                            <div><strong>1 Hora Rotativo</strong><small>Comercial Centro</small></div>
+                                            <span>R$ 3,50</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-calendar-check"></i>
+                                            <div><strong>Diária Completa</strong><small>Estacionamento Livre</small></div>
+                                            <span>R$ 18,00</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-award"></i>
+                                            <div><strong>Plano Mensalista</strong><small>Reserva garantida</small></div>
+                                            <span>R$ 180,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phone-tabbar">
+                                <button class="screen-btn active" data-target="1"><i class="bi bi-p-square"></i><span>Vagas</span></button>
+                                <button class="screen-btn" data-target="2"><i class="bi bi-stopwatch"></i><span>Tempo</span></button>
+                                <button class="screen-btn" data-target="3"><i class="bi bi-receipt"></i><span>Planos</span></button>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Sistema Web & App</span>
+                                <span>MySQL</span>
+                                <span>Mobilidade</span>
+                            </div>
+                            <h3>ParkSmart — Sistema de Estacionamento Rotativo</h3>
+                            <p>Solução prática para gestão de vagas em tempo real, ativação de tickets digitais, contagem regressiva e banco de dados de reservas e tarifas.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJETO 4: AI, BD & CLOUD DASHBOARD APP -->
+                    <article class="project-card" data-category="ai">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-statusbar">
+                                <span>11:20</span>
+                                <div class="status-icons">
+                                    <i class="bi bi-reception-4"></i>
+                                    <i class="bi bi-wifi"></i>
+                                    <i class="bi bi-battery-full"></i>
+                                </div>
+                            </div>
+
+                            <div class="app-screens">
+                                <!-- Tela 1: Cloud & DB Metrics -->
+                                <div class="app-screen active" data-screen="1">
+                                    <div class="app-top-bar">
+                                        <div>
+                                            <small>Cluster São Paulo</small>
+                                            <strong>NexusCloud & DB</strong>
+                                        </div>
+                                        <i class="bi bi-cpu"></i>
+                                    </div>
+                                    <div class="metrics-grid">
+                                        <div class="metric-box">
+                                            <small>Uptime BD</small>
+                                            <strong>99.99%</strong>
+                                        </div>
+                                        <div class="metric-box">
+                                            <small>Queries/s</small>
+                                            <strong>1.420</strong>
+                                        </div>
+                                    </div>
+                                    <div class="tx-list">
+                                        <div class="tx-item">
+                                            <i class="bi bi-database-check"></i>
+                                            <div><strong>Backup PostgreSQL</strong><small>Snapshot criptografado</small></div>
+                                            <span class="positive">OK</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-shield-check"></i>
+                                            <div><strong>WAF & Firewall</strong><small>Zero intrusões detectadas</small></div>
+                                            <span class="positive">ATIVO</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tela 2: Assistente IA SQL -->
+                                <div class="app-screen" data-screen="2">
+                                    <div class="app-top-bar">
+                                        <strong>Copiloto DBA & IA</strong>
+                                        <span class="tag-pill">Online</span>
+                                    </div>
+                                    <div class="ai-chat-box">
+                                        <div class="chat-bubble user">Otimizar consulta SQL do relatório mensal de clientes.</div>
+                                        <div class="chat-bubble ai">Índice composto criado na tabela! Tempo de query reduzido de 840ms para 18ms ⚡</div>
+                                    </div>
+                                    <div class="fake-app-btn"><i class="bi bi-stars"></i> Executar Query</div>
+                                </div>
+
+                                <!-- Tela 3: Sprints & Tasks -->
+                                <div class="app-screen" data-screen="3">
+                                    <div class="app-top-bar">
+                                        <strong>Roadmap & Sprints</strong>
+                                        <i class="bi bi-kanban"></i>
+                                    </div>
+                                    <div class="tx-list">
+                                        <div class="tx-item">
+                                            <i class="bi bi-check2-square"></i>
+                                            <div><strong>Modelagem de Dados</strong><small>Banco SQL • Concluído</small></div>
+                                            <span class="positive">100%</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-check2-square"></i>
+                                            <div><strong>Design System Mobile</strong><small>Front-end • Concluído</small></div>
+                                            <span class="positive">100%</span>
+                                        </div>
+                                        <div class="tx-item">
+                                            <i class="bi bi-arrow-repeat"></i>
+                                            <div><strong>Auditoria Pentest</strong><small>Segurança • Em progresso</small></div>
+                                            <span>90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phone-tabbar">
+                                <button class="screen-btn active" data-target="1"><i class="bi bi-database-gear"></i><span>Cluster BD</span></button>
+                                <button class="screen-btn" data-target="2"><i class="bi bi-robot"></i><span>IA SQL</span></button>
+                                <button class="screen-btn" data-target="3"><i class="bi bi-list-check"></i><span>Tasks</span></button>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span>Cloud & SecOps</span>
+                                <span>SQL / NoSQL</span>
+                                <span>Full-Stack</span>
+                            </div>
+                            <h3>NexusCloud — Painel de Banco de Dados & IA</h3>
+                            <p>Aplicação voltada para monitoramento de clusters de banco de dados, otimização de queries com IA e segurança de infraestrutura em nuvem.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO (REDIRECIONAMENTO E-MAIL + WHATSAPP) -->
+        <section class="formulario" id="formulario">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">VAMOS CONVERSAR?</span>
+                    <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+                    <p class="section-desc">Preencha os dados abaixo: sua mensagem será encaminhada diretamente para meu e-mail (<strong>caiogustavolopezs@gmail.com</strong>) e abrirá o atendimento rápido no meu WhatsApp (<strong>11 96607-6031</strong>).</p>
+                </div>
+                
+                <form id="contact-form">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required autocomplete="off"> 
+                    <input type="email" name="email" id="email" placeholder="Seu melhor e-mail:" required autocomplete="off">  
+                    <input type="tel" name="celular" id="celular" placeholder="Seu celular / WhatsApp:" required autocomplete="off">
+                    <textarea name="mensagem" id="mensagem" placeholder="Conte um pouco sobre o seu projeto ou ideia..." required></textarea>  
+
+                    <div class="form-actions-dual">
+                        <button type="submit" class="btn-submit-main" id="btn-submit-both">
+                            <i class="bi bi-whatsapp"></i> <i class="bi bi-envelope-at-fill"></i> ENVIAR PARA E-MAIL & WHATSAPP
+                        </button>
+                        <div class="form-sub-buttons">
+                            <button type="button" id="btn-only-whatsapp" class="btn-alt-send whatsapp-only">
+                                <i class="bi bi-whatsapp"></i> Chamar direto no WhatsApp
+                            </button>
+                            <button type="button" id="btn-only-email" class="btn-alt-send email-only">
+                                <i class="bi bi-envelope-paper-fill"></i> Enviar apenas por E-mail
+                            </button>
+                        </div>
+                    </div>
+                    <p id="form-feedback" class="form-feedback"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/Logo_1.png" alt="Logo CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                        <span class="logo-fallback" style="display:none;">CL<span>.DEV</span></span>
+                    </div>
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://wa.me/5511966076031?text=Olá,%20vim%20pelo%20seu%20portfólio!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><button><i class="bi bi-whatsapp"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer borda">
+                <div class="flex">
+                    <p>
+                        <i class="bi bi-envelope-fill"></i> <a href="mailto:caiogustavolopezs@gmail.com">caiogustavolopezs@gmail.com</a>
+                        &nbsp;|&nbsp;
+                        <i class="bi bi-whatsapp"></i> <a href="https://wa.me/5511966076031" target="_blank" rel="noopener noreferrer">(11) 96607-6031</a>
+                    </p>
+                    <p class="copyright">© 2026 Caio Lopes (CL DEV). Todos os direitos reservados.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<section id="sobre" class="alt">
-  <div class="wrap about">
-    <div class="about__text">
-      <h2>Caio Lopes, desenvolvedor full-stack</h2>
-      <p>Desenvolvo sites, portais e ferramentas internas. Hoje a maior parte do meu trabalho é para a Premiatta, marca de alimentos premium para cães e gatos: o site, o portal de pedidos, a logística e a manutenção.</p>
-      <p>Também faço sites para outras empresas pela C&amp;M Solutions. O que mais gosto é tirar um processo da planilha e colocar num sistema com login, banco e histórico.</p>
-      <ul class="stack" aria-label="Tecnologias que uso"><li><img src="img/icons/php.svg" alt="" width="28" height="28"><span>PHP</span></li><li><img src="img/icons/mysql.svg" alt="" width="28" height="28"><span>MySQL</span></li><li><img src="img/icons/javascript.svg" alt="" width="28" height="28"><span>JavaScript</span></li><li><img src="img/icons/html5.svg" alt="" width="28" height="28"><span>HTML</span></li><li><img src="img/icons/css3.svg" alt="" width="28" height="28"><span>CSS</span></li><li><img src="img/icons/nodejs.svg" alt="" width="28" height="28"><span>Node.js</span></li><li><img src="img/icons/python.svg" alt="" width="28" height="28"><span>Python</span></li><li><img src="img/icons/postgresql.svg" alt="" width="28" height="28"><span>PostgreSQL</span></li><li><img src="img/icons/react.svg" alt="" width="28" height="28"><span>React</span></li><li><img src="img/icons/typescript.svg" alt="" width="28" height="28"><span>TypeScript</span></li><li><img src="img/icons/git.svg" alt="" width="28" height="28"><span>Git</span></li><li><img src="img/icons/vercel.svg" alt="" class="inv" width="28" height="28"><span>Vercel</span></li></ul>
-      <div class="socials">
-        <a class="btn btn--secondary" href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn btn--secondary" href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-    <div class="about__photo"><img src="img/caio.webp" alt="Caio Lopes de camisa preta, foto no espelho" width="531" height="570"></div>
-  </div>
-</section>
-</main>
-<footer class="closing" id="contato">
-  <div class="wrap">
-    <div class="close">
-      <h2>Orçamento de site ou sistema</h2>
-      <p>Me conte pelo WhatsApp o que precisa sair da planilha ou ir para a internet. Respondo com perguntas sobre o processo e um prazo.</p>
-      <div class="btn-row">
-        <a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn btn--secondary" href="CaioLopesDevATT.pdf" download>Baixar currículo</a>
-      </div>
-    </div>
-    <div class="directory">
-      <div><a class="brand" href="index.html"><img src="img/logo-cl-64.png" alt="" width="32" height="32">Caio Lopes</a><p class="muted" style="margin-top:12px;max-width:34ch">Sites, portais e sistemas web com banco de dados.</p></div>
-      <div><h3>Projetos</h3><ul><li><a href="projetos/premiatta-site.html">premiatta.com</a></li><li><a href="projetos/premiatta-connect.html">Premiatta Connect</a></li><li><a href="projetos/roteirizador.html">Roteirizador</a></li><li><a href="projetos/ordem-servico.html">Ordem de Serviço</a></li></ul></div>
-      <div><h3>Contato</h3><ul><li><a href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
-      <p class="legal"><span>© 2026 Caio Lopes</span><span>Ícones via Devicon. Nomes e logos de tecnologias são marcas de seus donos.</span></p>
-    </div>
-  </div>
-</footer>
 </body>
 </html>

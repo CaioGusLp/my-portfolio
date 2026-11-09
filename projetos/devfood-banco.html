@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/banco.css">
+
+    <title>DevFood DB | Projeto de Banco de Dados - CL DEV</title>
+    <meta name="description" content="Projeto de banco de dados de uma plataforma de delivery feito por Caio Lopes: 14 tabelas, triggers, views, índices e consultas analíticas rodando no navegador.">
+    <link rel="icon" type="image/x-icon" href="../images/Logo_1.ico">
+</head>
+<body>
+
+    <!-- Efeitos de luz de fundo -->
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <header id="header">
+        <div class="interface">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/Logo_1.png" alt="Logo CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <span class="logo-fallback" style="display:none;">CL<span>.DEV</span></span>
+                </a>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="#modelagem">Modelagem</a></li>
+                    <li><a href="#lab">Criação do banco</a></li>
+                    <li><a href="#esquema">Esquema</a></li>
+                    <li><a href="#console">Console SQL</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="../index.html#formulario">
+                    <button><i class="bi bi-send-fill"></i> Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar" id="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="#modelagem">Modelagem</a></li>
+                        <li><a href="#lab">Criação do banco</a></li>
+                        <li><a href="#esquema">Esquema</a></li>
+                        <li><a href="#console">Console SQL</a></li>
+                        <li><a href="../index.html#formulario">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TOPO DO PROJETO -->
+        <section class="db-hero" id="topo">
+            <div class="interface">
+                <a class="db-back" href="../index.html#destaques"><i class="bi bi-arrow-left"></i> Voltar ao portfólio</a>
+                <div class="badge-tech">
+                    <span class="pulse-dot"></span> Projeto de Banco de Dados · dados fictícios
+                </div>
+                <h1>DEVFOOD <span>DATABASE.</span></h1>
+                <p>Banco de dados completo de uma plataforma de delivery, criado do zero para mostrar modelagem, integridade, automação e análise de dados. Monte o banco migração por migração, veja as tabelas surgirem e rode consultas de verdade aqui mesmo.</p>
+
+                <div class="db-hero-stats">
+                    <div><strong>14</strong><span>Tabelas</span></div>
+                    <div><strong>5</strong><span>Triggers</span></div>
+                    <div><strong>2</strong><span>Views</span></div>
+                    <div><strong>6</strong><span>Índices</span></div>
+                    <div><strong>360</strong><span>Pedidos gerados por SQL</span></div>
+                </div>
+
+                <div class="btns-cta">
+                    <a class="btn btn-primary-custom" href="#lab">
+                        Montar o banco <i class="bi bi-play-circle-fill"></i>
+                    </a>
+                    <a class="btn btn-outline-custom" href="#console">
+                        Ir para o console SQL <i class="bi bi-terminal-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE O BANCO MOSTRA -->
+        <section class="especialidades" id="modelagem">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">MODELAGEM</span>
+                    <h2 class="titulo">O QUE ESTE BANCO <span>DEMONSTRA.</span></h2>
+                    <p class="section-desc">Cada decisão está no código das migrações abaixo, com o motivo de cada passo.</p>
+                </div>
+                <div class="grid-especialidades db-grid">
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-diagram-3"></i></div>
+                        <h3>Modelagem normalizada</h3>
+                        <p>Clientes, endereços, restaurantes, cardápio, pedidos, pagamentos e entregas em 3ª forma normal, sem dado repetido.</p>
+                        <div class="box-tags"><span>3FN</span><span>Chaves estrangeiras</span></div>
+                    </div>
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+                        <h3>Integridade no banco</h3>
+                        <p>CHECK, UNIQUE composto e um índice parcial que impede dois endereços principais para o mesmo cliente.</p>
+                        <div class="box-tags"><span>CHECK</span><span>Índice parcial</span></div>
+                    </div>
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
+                        <h3>Regras automáticas</h3>
+                        <p>Triggers somam o subtotal, travam pedido finalizado e guardam o histórico de status e de preço. O total é coluna calculada.</p>
+                        <div class="box-tags"><span>Triggers</span><span>Generated column</span></div>
+                    </div>
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-speedometer2"></i></div>
+                        <h3>Performance</h3>
+                        <p>Índices compostos pensados para as telas mais usadas, conferidos com o plano de execução da consulta.</p>
+                        <div class="box-tags"><span>Índices</span><span>EXPLAIN</span></div>
+                    </div>
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>Análise de dados</h3>
+                        <p>Views para o painel, faturamento acumulado, ranking de produtos e quartis de clientes com funções de janela.</p>
+                        <div class="box-tags"><span>CTE</span><span>Window functions</span></div>
+                    </div>
+                    <div class="especialidades-box">
+                        <div class="icon-box"><i class="bi bi-cpu"></i></div>
+                        <h3>Dados gerados por SQL</h3>
+                        <p>Uma CTE recursiva cria 60 dias de pedidos no almoço e no jantar, e o ciclo de vida de cada um passa pelos triggers.</p>
+                        <div class="box-tags"><span>WITH RECURSIVE</span><span>Seed</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRIAÇÃO DO BANCO PASSO A PASSO -->
+        <section class="db-section" id="lab">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">PASSO A PASSO</span>
+                    <h2 class="titulo">CRIAÇÃO DO <span>BANCO.</span></h2>
+                    <p class="section-desc">Aplique as migrações na ordem em que o banco foi criado. Tudo roda num SQLite dentro do seu navegador; nada é enviado para servidor nenhum.</p>
+                </div>
+
+                <div class="lab" data-dbconsole data-vendor="../vendor/">
+                    <div class="lab__steps">
+                        <ol data-steps aria-label="Migrações"></ol>
+                        <p class="lab__progress" data-progress role="status"></p>
+                    </div>
+                    <div class="lab__code">
+                        <div class="db-window">
+                            <div class="terminal-header">
+                                <div class="terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                                <span class="terminal-title">migrations/devfood.sql</span>
+                            </div>
+                            <div class="lab__info"><h3 data-step-title></h3><p data-step-desc></p></div>
+                            <pre class="code" data-step-code tabindex="0" aria-label="Código SQL da migração"></pre>
+                            <div class="lab__actions">
+                                <button class="btn btn-primary-custom" type="button" data-next disabled><span>Aplicar migração 001</span></button>
+                                <button class="btn btn-outline-custom" type="button" data-all disabled>Aplicar todas</button>
+                                <button class="btn btn-ghost" type="button" data-reset><i class="bi bi-arrow-counterclockwise"></i> Recomeçar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESQUEMA AO VIVO -->
+        <section class="db-section db-section--alt" id="esquema">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">DIAGRAMA</span>
+                    <h2 class="titulo">ESQUEMA <span>AO VIVO.</span></h2>
+                    <p class="section-desc">Atualiza a cada migração aplicada. Clique em FK para ir até a tabela referenciada.</p>
+                </div>
+                <p class="schema-meta" data-schema-meta>Banco vazio. Aplique a primeira migração.</p>
+                <div class="schema" data-schema aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- CONSOLE SQL -->
+        <section class="db-section" id="console">
+            <div class="interface">
+                <div class="section-header">
+                    <span class="subtitulo">CONSULTAS</span>
+                    <h2 class="titulo">CONSOLE <span>SQL.</span></h2>
+                    <p class="section-desc">Escolha uma consulta pronta ou escreva a sua. Ctrl + Enter também executa.</p>
+                </div>
+
+                <div class="examples" data-examples aria-label="Consultas prontas"></div>
+
+                <div class="db-window console-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                        <span class="terminal-title">devfood_db — sqlite</span>
+                    </div>
+                    <div class="editor">
+                        <pre data-query-hl aria-hidden="true"></pre>
+                        <textarea data-query spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Consulta SQL" rows="7"></textarea>
+                    </div>
+                    <div class="console__bar">
+                        <span class="console__status" data-query-status role="status"></span>
+                        <button class="btn btn-primary-custom" type="button" data-run><i class="bi bi-play-fill"></i> Executar</button>
+                    </div>
+                    <div class="result" data-result></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="../images/Logo_1.png" alt="Logo CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                        <span class="logo-fallback" style="display:none;">CL<span>.DEV</span></span>
+                    </div>
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://wa.me/5511966076031?text=Olá,%20vim%20pelo%20seu%20portfólio!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><button><i class="bi bi-whatsapp"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer borda">
+                <div class="flex">
+                    <p>
+                        <i class="bi bi-envelope-fill"></i> <a href="mailto:caiogustavolopezs@gmail.com">caiogustavolopezs@gmail.com</a>
+                        &nbsp;|&nbsp;
+                        <i class="bi bi-whatsapp"></i> <a href="https://wa.me/5511966076031" target="_blank" rel="noopener noreferrer">(11) 96607-6031</a>
+                    </p>
+                    <p class="copyright">© 2026 Caio Lopes (CL DEV). Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile (mesmo comportamento da página inicial)
+        (function () {
+            var menu = document.getElementById('menu-mobile');
+            ['btn-menu', 'btn-fechar', 'overlay-menu'].forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) el.addEventListener('click', function () { menu.classList.toggle('abrir-menu'); });
+            });
+            document.querySelectorAll('.menu-mobile nav a').forEach(function (a) {
+                a.addEventListener('click', function () { menu.classList.remove('abrir-menu'); });
+            });
+        })();
+    </script>
+    <script src="../vendor/sql-wasm.js"></script>
+    <script src="../js/db/devfood.js"></script>
+    <script src="../js/dbconsole.js"></script>
+</body>
+</html>

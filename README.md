@@ -1,18 +1,12 @@
-# Portfólio — Caio Lopes
+# Portfólio CL DEV — Caio Lopes
 
-Site estático (HTML, CSS e JavaScript puros). Não precisa de build.
+Mesmo site de antes, com duas adições:
 
-## Estrutura
-- `index.html` — home
-- `projetos/*.html` — uma página por projeto (premiatta.com, Premiatta Connect, Roteirizador, Ordem de Serviço)
-- `js/db/*.js` — as migrações MySQL e as consultas prontas de cada projeto (edite aqui para mudar o banco de modelo)
-- `js/dbconsole.js` — aplica as migrações num SQLite no navegador (sql.js), desenha o esquema e roda o console
-- `css/site.css` — sistema visual; `css/ui.css` — telas dos projetos em HTML
-- `vendor/` — sql.js (SQLite em WebAssembly), `fonts/` — Geist, `img/icons/` — ícones Devicon
+- **Seção "Projetos em destaque"** (index.html, id `destaques`): premiatta.com e o DevFood DB.
+- **projetos/devfood-banco.html**: projeto de banco de dados fictício (delivery) com as migrações passo a passo, o esquema ao vivo e um console SQL. Roda em SQLite no navegador (`vendor/sql-wasm.*`).
 
-## Rodar localmente
-O console SQL carrega um arquivo `.wasm`, então abra por um servidor (não pelo `file://`):
+## Print do premiatta.com
+Salve um print da página inicial como `images/projetos/premiatta.webp` (1280x800). Ele aparece no lugar da tela em HTML automaticamente.
 
-    python3 -m http.server 8000
-
-e acesse http://localhost:8000. No GitHub Pages, Vercel ou Hostinger funciona direto.
+## Testar localmente
+O console carrega um arquivo .wasm, então abra por um servidor: `python3 -m http.server 8000`.
