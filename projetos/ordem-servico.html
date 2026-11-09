@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-type="software">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ordem de Serviço: ordem de serviço digital para manutenção com BPF | Caio Lopes</title>
+<meta name="description" content="Substitui a planilha de Excel: o operador abre a OS, a manutenção registra o serviço e um verificador libera a linha, cada passo com nome e horário. Veja as telas, as decisões e monte o banco de dados no navegador.">
+<meta name="page-type" content="software">
+<meta name="site-kind" content="software">
+<meta name="theme-color" content="#141517">
+<meta property="og:title" content="Ordem de Serviço: ordem de serviço digital para manutenção com BPF | Caio Lopes">
+<meta property="og:description" content="Substitui a planilha de Excel: o operador abre a OS, a manutenção registra o serviço e um verificador libera a linha, cada passo com nome e horário. Veja as telas, as decisões e monte o banco de dados no navegador.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../img/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- <link rel="canonical" href="https://SEU-DOMINIO/"> quando o domínio estiver definido -->
+<link rel="icon" href="../favicon.ico">
+<link rel="preload" href="../fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/ui.css">
+<script src="../js/site.js" defer></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="skip-link" href="#top">Pular para o conteúdo</a>
+    <a class="brand" href="../index.html"><img src="../img/logo-cl-64.png" alt="" width="32" height="32">Caio Lopes</a>
+    <nav class="nav__links" aria-label="Principal"><a href="../index.html#projetos">Projetos</a><a href="#banco">Banco</a><a href="#esquema">Esquema</a><a href="#console">Console</a><a href="../index.html#sobre">Sobre</a></nav>
+    <a class="btn btn--secondary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    <div class="nav__sheet" id="menu"><a href="../index.html#projetos">Projetos</a><a href="#banco">Banco</a><a href="#esquema">Esquema</a><a href="#console">Console</a><a href="../index.html#sobre">Sobre</a><a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento</a></div>
+  </div>
+</header>
+<main id="top">
+<section class="hero hero--project" data-enter>
+  <div class="wrap">
+    <div class="hero__text">
+      <a class="crumb" href="../index.html#projetos">← Todos os projetos</a>
+      <span class="label" style="display:flex"><span class="dot"></span>Projeto 04 · Em desenvolvimento</span>
+      <h1 style="margin-top:16px">Ordem de serviço digital para manutenção em fábrica com BPF</h1>
+      <p class="hero__lead">Substitui a planilha de Excel: o operador abre a OS, a manutenção registra o serviço e um verificador libera a linha, cada passo com nome e horário.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#banco">Montar o banco <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn--secondary" href="#console">Abrir o console SQL</a>
+      </div>
+      <dl class="facts"><div><dt>Stack</dt><dd>PHP, MySQL, JavaScript</dd></div><div><dt>Hospedagem</dt><dd>Hostinger Cloud</dd></div><div><dt>Papéis</dt><dd>Solicitante, manutenção, verificador</dd></div><div><dt>Substitui</dt><dd>Planilha de OS em Excel</dd></div></dl>
+    </div>
+    <div class="hero__art"><div class="frame"><div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">os · manutenção</span></div><div class="frame__body">
+<div class="ui-os" role="img" aria-label="Ordem de serviço aguardando verificação, com checklist de liberação da linha">
+  <div class="ui-os__head"><b>OS-2026-0142</b><span class="ui-os__prio">Prioridade média</span></div>
+  <div class="ui-os__track"><span class="done">Aberta</span><span class="done">Execução</span><span class="now">Verificação</span><span>Fechada</span></div>
+  <div class="ui-os__card">
+    <div><small>Equipamento</small>EXT-01 · Extrusora principal</div>
+    <div><small>Tipo</small>Preventiva</div>
+    <div class="full"><small>Serviço realizado</small>Facas trocadas e matriz limpa.</div>
+  </div>
+  <div class="ui-os__check"><small>Liberação BPF</small>
+    <label><i class="on">✓</i>Limpeza da área conferida</label>
+    <label><i class="on">✓</i>Ferramentas recolhidas</label>
+    <label><i></i>Linha liberada para produção</label>
+  </div>
+  <span class="ui-os__sign">Assinar e liberar linha</span>
+</div></div></div></div>
+  </div>
+</section>
+
+<section id="funcoes" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>O que o Ordem de Serviço faz</h2>
+      <p>Troca a planilha de OS por um sistema com papéis, verificação obrigatória e trilha para auditoria.</p>
+    </div>
+    <div class="features"><div class="feature"><span class="n">01</span><h3>Abre a OS com equipamento e prioridade</h3><p>A TAG do equipamento, o tipo de manutenção e se a linha está parada.</p></div><div class="feature"><span class="n">02</span><h3>Separa quem executa de quem verifica</h3><p>A manutenção registra o serviço; outra pessoa confere limpeza e libera a linha.</p></div><div class="feature"><span class="n">03</span><h3>Guarda a trilha para auditoria</h3><p>Cada mudança de status fica gravada com usuário e horário.</p></div></div>
+    <div class="decisions"><h3>Decisões técnicas</h3><ul><li>Cadastro novo fica pendente até o admin aprovar e definir o papel.</li><li>Login e usuários saíram do localStorage para uma API própria com banco.</li><li>A OS só fecha depois da verificação assinada.</li><li>O status anda numa ordem fixa: aberta, execução, verificação, fechada.</li></ul></div>
+  </div>
+</section>
+
+<section id="banco">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>O banco, migração por migração</h2>
+      <p>Aplique as migrações na ordem em que o banco foi criado. O código é MySQL e roda num SQLite dentro do seu navegador; os dados de exemplo são fictícios.</p>
+    </div>
+    <div class="lab" data-dbconsole data-vendor="../vendor/">
+      <div class="lab__steps">
+        <ol data-steps aria-label="Migrações"></ol>
+        <p class="lab__progress" data-progress role="status"></p>
+      </div>
+      <div class="lab__code">
+        <div class="frame">
+          <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">migrations/ordem-servico.sql</span></div>
+          <div class="lab__info"><h3 data-step-title></h3><p data-step-desc></p></div>
+          <pre class="code" data-step-code tabindex="0" aria-label="Código SQL da migração"></pre>
+          <div class="lab__actions">
+            <button class="btn btn--primary" type="button" data-next disabled><span>Aplicar migração 001</span></button>
+            <button class="btn btn--secondary" type="button" data-all disabled>Aplicar todas</button>
+            <button class="btn btn--secondary" type="button" data-reset>Recomeçar do zero</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="esquema" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Esquema do banco agora</h2>
+      <p>Muda a cada migração aplicada. Toque em FK para ir até a tabela referenciada.</p>
+    </div>
+    <p class="schema-meta" data-schema-meta style="margin-bottom:16px">Banco vazio. Aplique a primeira migração.</p>
+    <div class="schema" data-schema aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="console">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Console SQL do Ordem de Serviço</h2>
+      <p>Escolha uma consulta pronta ou escreva a sua. Ctrl + Enter também roda.</p>
+    </div>
+    <div class="console">
+      <div class="examples" data-examples aria-label="Consultas prontas"></div>
+      <div class="frame">
+        <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">sqlite · ordem-servico</span></div>
+        <div class="editor">
+          <pre data-query-hl aria-hidden="true"></pre>
+          <textarea id="q" data-query spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Consulta SQL" rows="6"></textarea>
+        </div>
+        <div class="console__bar">
+          <span class="console__status" data-query-status role="status"></span>
+          <button class="btn btn--secondary" type="button" data-run>Rodar consulta</button>
+        </div>
+        <div class="result" data-result></div>
+      </div>
+      <a class="next-proj" href="premiatta-site.html"><span><small>Próximo projeto · 01</small><b>premiatta.com: site institucional com catálogo e painel admin</b></span><span class="go">Ver projeto</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="closing" id="contato">
+  <div class="wrap">
+    <div class="close">
+      <h2>Orçamento de site ou sistema</h2>
+      <p>Me conte pelo WhatsApp o que precisa sair da planilha ou ir para a internet. Respondo com perguntas sobre o processo e um prazo.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn--secondary" href="../CaioLopesDevATT.pdf" download>Baixar currículo</a>
+      </div>
+    </div>
+    <div class="directory">
+      <div><a class="brand" href="../index.html"><img src="../img/logo-cl-64.png" alt="" width="32" height="32">Caio Lopes</a><p class="muted" style="margin-top:12px;max-width:34ch">Sites, portais e sistemas web com banco de dados.</p></div>
+      <div><h3>Projetos</h3><ul><li><a href="../projetos/premiatta-site.html">premiatta.com</a></li><li><a href="../projetos/premiatta-connect.html">Premiatta Connect</a></li><li><a href="../projetos/roteirizador.html">Roteirizador</a></li><li><a href="../projetos/ordem-servico.html">Ordem de Serviço</a></li></ul></div>
+      <div><h3>Contato</h3><ul><li><a href="https://wa.me/5511966076031?text=Ol%C3%A1%20Caio%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/caiolopez_dev/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/caiolopesdev" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+      <p class="legal"><span>© 2026 Caio Lopes</span><span>Ícones via Devicon. Nomes e logos de tecnologias são marcas de seus donos.</span></p>
+    </div>
+  </div>
+</footer>
+<script src="../vendor/sql-wasm.js"></script>
+<script src="../js/db/ordem-servico.js"></script>
+<script src="../js/dbconsole.js"></script>
+</body>
+</html>
